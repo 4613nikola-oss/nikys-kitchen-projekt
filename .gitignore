@@ -1,0 +1,28 @@
+# Repozitář s podklady: jen CLAUDE.md, PROJEKT.md a složka podklady/
+
+# Web a appky mají vlastní repozitáře
+niky-web/
+jidlo-od-a-z/
+nikys-kitchen/
+
+# Instalačky a archivy sem nepatří
+*.exe
+*.zip
+*.rar
+*.7z
+
+# Soukromé věci, hesla a klíče – nikdy na GitHub
+soukrome/
+.env*
+*.pem
+*.key
+*heslo*
+*hesla*
+*password*
+*secret*
+*token*
+
+# Systémové soubory
+Thumbs.db
+desktop.ini
+.DS_Store
