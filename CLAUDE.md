@@ -25,7 +25,8 @@
 * **Zatím ne:** databáze, přihlášení (Auth.js) – až v pozdější fázi
 * **UI:** vlastní CSS, fonty Playfair Display (nadpisy) + Plus Jakarta Sans (text) z Google Fonts (v Next.js přes `next/font`)
 * **Data:** appka `jidlo-od-a-z/js/data.js` (recepty, články), uživatelská data v `localStorage`. Žádná databáze.
-* **Hosting:** GitHub Pages (appka), web zatím nehostovaný
+* **Hosting:** GitHub Pages – appka i nový web (`https://4613nikola-oss.github.io/nikys-kitchen-web/`, nasazuje `.github/workflows/nasazeni.yml` po pushi na `main`, basePath `/nikys-kitchen-web`). Veřejné: appka, nový web. Soukromé: starý web (fonty s nejasnou licencí), podklady (obchodní plány)
+* **Commity** se podepisují soukromým e-mailem GitHubu (`…@users.noreply.github.com`, nastaveno globálně)
 * **Kontejnerizace:** Docker + nginx (appka), obraz `nikolapaluskova/jidlo-od-a-z` na Docker Hubu
 
 ## Pravidla

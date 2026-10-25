@@ -81,6 +81,7 @@ Poslední aktualizace: 2026-10-24
 * **2026-10-05** – Příkazy (instalace, buildy, testy) se spouštějí **jen v Dockeru**, nic se neinstaluje přímo do počítače. Práce probíhá ve fázích: nejdřív struktura, pak detaily, průběžná kontrola v prohlížeči
 * **2026-10-24** – **Dvě větve na GitHubu:** `dev` = rozpracované (Claude tam nahrává průběžně), `main` = hotové a živé. Do `main` jde až na pokyn Niky („nahraj to“)
 * **2026-10-24** – **Podklady jsou zálohované na GitHubu** v samostatném soukromém repozitáři `nikys-kitchen-projekt` (kniha projektu, pravidla, brainstorming, logo, maskot)
+* **2026-10-25** – **Nový web bude veřejný** (repozitář i stránka na GitHub Pages, zdarma). Veřejná zůstává i appka. **Soukromé zůstávají** podklady (obchodní plány a strategie) a starý web (písma, která možná nesmíme sdílet)
 * **2026-10-03** – Design musí být **responzivní** (mobil, tablet, počítač)
 * **2026-10-03** – Web má být **co nejpřívětivější pro co nejvíc lidí, nikoho nevynechat** (jazyk, zrak, věk, zdraví, peníze, čas, technika)
 * **2026-10-03** – Vizuální podklady a brainstorming žijí v Miru a ve složce `podklady/`; průběžně se aktualizují podle dohod
