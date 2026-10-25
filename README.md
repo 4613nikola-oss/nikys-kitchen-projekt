@@ -23,6 +23,11 @@ Hodně lidí chce jíst zdravě, ale v praxi narazí na tohle:
 - krátké texty s možností rozkliknout víc, čeština a angličtina, důraz na přístupnost (i pro lidi se zrakovým postižením),
 - informace jen z ověřených zdrojů, bez zdravotních slibů.
 
+## Proč to celé dává smysl
+
+- **Web** přivádí lidi: najdou recept nebo článek přes Google, Instagram či Pinterest a dozvědí se, že zdravé jídlo nemusí být složité.
+- **Appka** jim pomůže v praxi: řekne, co a kolik jíst a z čeho to uvařit. Zdarma, takže si ji vyzkouší bez rizika.
+- **Obchod** je pro ty, kdo chtějí víc: hotové jídelní plány, e-booky a kurzy za rozumnou cenu. Zdarma je to, co přivádí lidi, placené to, co ušetří nejvíc času.
 ## Niky's Kitchen – jak to spolu souvisí
 
 Cíl: ulehčit lidem zdravé stravování – žádné složité počítání, žádné výčitky, jasná odpověď na „co mám dnes jíst a kolik“. Pro ženy i muže 18+, kteří nemají moc času.
