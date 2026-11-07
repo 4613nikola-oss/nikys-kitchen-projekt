@@ -26,7 +26,7 @@
 * **Zatím ne:** přihlášení (Auth.js), živá databáze na internetu (newsletter a obchod potřebují server – např. Supabase)
 * **UI:** vlastní CSS, fonty Playfair Display (nadpisy) + Plus Jakarta Sans (text) z Google Fonts (v Next.js přes `next/font`)
 * **Data:** recepty a články jen v databázi (web i appka). Uživatelská data appky v `localStorage`.
-* **Hosting:** GitHub Pages – appka i nový web (`https://4613nikola-oss.github.io/nikys-kitchen-web/`, nasazuje `.github/workflows/nasazeni.yml` po pushi na `main`, basePath `/nikys-kitchen-web`). Veřejné: appka, nový web. Soukromé: starý web (fonty s nejasnou licencí), podklady (obchodní plány)
+* **Hosting:** GitHub Pages – appka i nový web (`https://4613nikola-oss.github.io/nikys-kitchen-web/`, nasazuje `.github/workflows/nasazeni.yml` po pushi na `main`, basePath `/nikys-kitchen-web`). Všechny 4 repozitáře jsou veřejné (rozhodnutí Niky 2026-11-07)
 * **Commity** se podepisují soukromým e-mailem GitHubu (`…@users.noreply.github.com`, nastaveno globálně)
 * **Kontejnerizace:** Docker + nginx (appka), obraz `nikolapaluskova/jidlo-od-a-z` na Docker Hubu
 
@@ -43,7 +43,7 @@
 
 ### Git a GitHub
 
-* Samostatné repozitáře: nový web, starý web, appka. Kořen `curzor_projekt` = repo **podkladů** (`nikys-kitchen-projekt`, SOUKROMÝ: CLAUDE.md, PROJEKT.md, podklady/ – jen větev `main`, pushuj po každé změně)
+* Samostatné repozitáře: nový web, starý web, appka. Kořen `curzor_projekt` = repo **podkladů** (`nikys-kitchen-projekt`, VEŘEJNÝ: CLAUDE.md, PROJEKT.md, podklady/ – jen větev `main`, pushuj po každé změně)
 * Větve: **`dev`** = práce, **`main`** = hotové/živé. Po každé hotové změně **commitni a pushni sám na `dev`** a řekni, co se změnilo (uživatelka nechce potvrzovat každý push)
 * Do `main` slučuj `dev` jen na pokyn uživatelky („nahraj to“, „pusť to ven“) – `main` u appky = **živý web** na GitHub Pages (nasadí se do minuty)
 * Commit zprávy česky, stručné a popisné
@@ -89,7 +89,7 @@ D:\curzor_projekt\
 │   ├── DASHBOARD.md          #   rozcestník a stav projektu
 │   ├── BRAINSTORMING.md      #   průzkum, věda se zdroji, konkurence, koncepty, kalkulačka
 │   ├── SITEMAP.md, PERSONY.md, FLOW.md
-├── niky-web\                 # 🆕 nový web v Next.js (git: 4613nikola-oss/nikys-kitchen-web, SOUKROMÝ)
+├── niky-web\                 # 🆕 nový web v Next.js (git: 4613nikola-oss/nikys-kitchen-web, VEŘEJNÝ)
 │   ├── app/[lang]/           #   stránky cs/en (recepty/[slug], clanky/[slug]…), layout.js = hlavička, patička, písma
 │   ├── db/                   #   databáze: init/01-tabulky.sql, init/02-data.sql, zaloha.sh
 │   ├── app/api/appka.json/   #   recepty pro appku (statický JSON z databáze)
@@ -104,12 +104,12 @@ D:\curzor_projekt\
 │   ├── js/data.js            #   recepty + články (zatím ukázková data)
 │   ├── manifest.json, ikona.svg   # PWA – přidání na plochu
 │   └── Dockerfile, docker-compose.yml, nginx.conf
-├── nikys-kitchen\            # 🌐 web a blog (git: 4613nikola-oss/nikys-kitchen, SOUKROMÝ)
+├── nikys-kitchen\            # 🌐 web a blog (git: 4613nikola-oss/nikys-kitchen, VEŘEJNÝ)
 │   ├── index.html, slane.html, sladke.html, napoje.html, clanky.html, galerie.html, o-mne.html
 │   ├── clanky/               #   jednotlivé články
 │   ├── recepty/              #   detailní recepty
 │   ├── css/style.css, js/main.js
-│   ├── images/, fonts/
+│   ├── images/ (písma z Google Fonts)
 └── jidlo-od-a-z.zip          # původní export appky (archiv, obsah je v jidlo-od-a-z\)
 ```
 

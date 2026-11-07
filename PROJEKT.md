@@ -17,7 +17,12 @@ Poslední aktualizace: 2026-11-07
 
 ## 🌐 Web
 
-**Stav:** funkční základ, soukromý na GitHubu, zatím není online.
+**Nový web (Next.js) – online:** https://4613nikola-oss.github.io/nikys-kitchen-web/
+* 17 receptů (slané, sladké, nápoje) a 6 článků, česky i anglicky, propojené mezi sebou
+* recepty a články jsou v databázi, přepočet porcí, alergeny, maskot Tečka
+* README na GitHubu se screenshoty, schématem a popisem, co projekt řeší
+
+**Starý web (čisté HTML)** – běží dál jen jako archiv, dokud nový nepřevezme všechno:
 
 | Stránka | Co obsahuje | Stav |
 |---|---|---|
@@ -49,15 +54,16 @@ Poslední aktualizace: 2026-11-07
 * **Nákup** – nákupní seznam z receptů, celého dne nebo ledničky
 * doporučí články podle cíle, pamatuje si údaje, jde přidat na plochu mobilu
 
-**Omezení:** recepty (14) a kcal jsou zatím ukázkové.
+**Recepty:** bere si je z databáze přes nový web (17 receptů). Když se nenačtou, použije záložní ukázkové recepty, takže funguje vždycky. Recepty bez kcal se do plánu dne nedávají.
 
 ---
 
 ## 🛒 Obchod (později)
 
 * **Digitální produkty** – bez skladu a rozvozu: malý placený vstup (mini e-book, plán na 7 dní) → hlavní nabídka (online kuchařka, kurz vaření dopředu s online setkáními, e-book pro starší) → pro věrné (předplatné, komunita)
-* Objednávky, platby a faktury přes FAPI (návrh)
+* Objednávky, platby a faktury přes FAPI (návrh) – platforma pro skutečný prodej ještě není rozhodnutá, musí být bez měsíčního poplatku
 * Krabičky s jídlem zatím odložené – moc práce
+* **Ukázkový obchod na Shopify** (do portfolia, nedá se v něm skutečně prodávat): vývojářský obchod `nikys-krabicky.myshopify.com`, zdarma bez limitu. Ukázková data od Shopify smazána, zůstal Pondělní oběd (Fit / Standard / Svaly)
 
 ---
 
@@ -85,7 +91,10 @@ Poslední aktualizace: 2026-11-07
 * **2026-11-07** – **Jedna databáze pro web i appku** (PostgreSQL, běží v Dockeru). Recepty a články jsou uložené jen jednou, appka si je stahuje z webu. Když se nestáhnou, má záložní recepty a funguje dál
 * **2026-10-25** – **Obchod bude přímo součástí webu**, ne samostatný web. Všechno na jednom místě (recepty, články, appka, obchod, newsletter) je pro lidi pohodlnější a ukazuje, že Niky umí dotáhnout celý projekt
 * **2026-10-25** – **Všechno zdarma natrvalo** – žádné měsíční poplatky ani placené zkušební verze, které po měsíci začnou stát peníze
-* **2026-10-25** – **Nový web bude veřejný** (repozitář i stránka na GitHub Pages, zdarma). Veřejná zůstává i appka. **Soukromé zůstávají** podklady (obchodní plány a strategie) a starý web (písma, která možná nesmíme sdílet)
+* **2026-10-25** – **Nový web bude veřejný** (repozitář i stránka na GitHub Pages, zdarma). Veřejná zůstává i appka. ~~Soukromé zůstávají podklady a starý web~~ – změněno 7. 11., všechno je veřejné (písma ze starého webu nahrazena)
+* **2026-11-07** – **Všechny repozitáře jsou veřejné** (rozhodla Niky): nový web, appka, starý web i podklady. Hesla a soukromé soubory hlídá pojistka `.gitignore`
+* **2026-11-07** – **Shopify vývojářský obchod jde do portfolia** (zdarma, bez placených aplikací). Učení „jednou Claude, podruhé Niky“: Claude udělá jednu věc, Niky tu další sama v administraci, Claude zkontroluje
+* **2026-11-07** – **Persony mají přesný věk** (Petra 35, Tomáš 27, Jana 38, Kája 21, Martin 54, Pavel 41, Emma 31) a profilové fotky (Niky je doplňuje v Miru)
 * **2026-10-03** – Design musí být **responzivní** (mobil, tablet, počítač)
 * **2026-10-03** – Web má být **co nejpřívětivější pro co nejvíc lidí, nikoho nevynechat** (jazyk, zrak, věk, zdraví, peníze, čas, technika)
 * **2026-10-03** – Vizuální podklady a brainstorming žijí v Miru a ve složce `podklady/`; průběžně se aktualizují podle dohod
@@ -113,6 +122,18 @@ Seřazené podle doporučeného pořadí.
 * [ ] Doplnit kcal u Koláče, ledové kávy, limonády a ginger shotu (v databázi přes Adminer) – bez nich se nedají do plánu dne v appce
 * [ ] Později: appka uvnitř webu, obchod, přihlášení, databáze na internetu pro newsletter a objednávky
 
+**Shopify – ukázkový obchod do portfolia** (úkoly i návody jsou v E-commerce akademii, modul 16):
+* [x] Smazat 17 ukázkových produktů od Shopify, opravit překlep „obět“ → „oběd“ (2026-11-07)
+* [ ] Přejmenovat obchod (doporučení: **Niky's Kitchen**), měna CZK, země Česko, časové pásmo Praha – Niky v Nastavení
+* [ ] Obědy úterý až pátek (Niky sama podle pondělního vzoru)
+* [ ] Kolekce, slevový kód VITEJ10, testovací objednávka a její vyřízení
+* [ ] Téma obchodu na GitHub (repozitář `nikys-kitchen-shopify`)
+* [ ] Case study do portfolia (web, appka, databáze, Shopify)
+
+**Persony a výzkum:**
+* [x] Přesný věk u všech person (Miro i PERSONY.md) a místo na fotky v Miru (2026-11-07)
+* [ ] Niky doplní fotky person v Miru (Upload → hledání obrázků, Unsplash zdarma)
+
 **Starý web a appka:**
 
 1. [ ] **Články:** na stránku Články dát skutečné články místo vymyšlených
@@ -121,7 +142,7 @@ Seřazené podle doporučeného pořadí.
 4. [ ] **Rychlost:** zmenšit fotky (2–3,5 MB → WebP kolem 200 kB)
 5. [ ] **Appka do webu:** vložit Jídlo od A–Z jako sekci webu
 6. [ ] **Recepty s kcal:** u každého receptu kcal na porci → přenést do appky místo ukázkových
-7. [ ] **Web online:** zveřejnit web (GitHub Pages)
+7. [x] **Web online:** hotovo – online je nový web (2026-11-07)
 8. [ ] **Newsletter a sociální sítě:** napojit, nebo zatím skrýt
 9. [ ] **Anglická verze celého webu a appky** (texty připravovat na překlad už od teď)
 
@@ -139,7 +160,14 @@ Seřazené podle doporučeného pořadí.
 
 * Týdenní jídelníček místo jednoho dne + nákupní seznam na týden (appka)
 * Kcal štítek u každého receptu a přepočet „kolik z toho sníst“ na webu
-* Jeden společný soubor receptů pro web, appku i e-shop
+* ~~Jeden společný soubor receptů pro web, appku i e-shop~~ → hotovo jako databáze (2026-11-07)
+* **Co bude v ukázkovém Shopify obchodě** (návrh, čeká na potvrzení): 3 typy zboží – krabičky Po–Pá (varianty, sklad), digitální týdenní plán v PDF (stažení), merch s logem a Tečkou (sklenice na ovesnou kaši, plátěná taška – doprava, hmotnost). V obchodě i v portfoliu označit jako ukázkový
+* **Merch pro skutečný obchod** (sklenice, tašky s Tečkou) – až budou fanoušci; fyzické zboží = sklad, balení, rozbité sklo, poštovné
+* **Cenové schody:** zdarma (recepty, články, appka, newsletter) → dárek za newsletter (startovací knížka 7 receptů + sleva 10 %) → malý placený produkt (týdenní plán PDF) → větší nabídka (e-kuchařka, kurz, prémiová appka). Newsletter jednou za 14 dní
+* **Dotazník** k ověření person (Google Forms, 8–10 otázek)
+* **Jedna výrazná barva navíc** do palety (šafránová / citrusová žlutá) jen na ~10 % plochy: štítky, sladká tečka, jedno hlavní tlačítko
+* **Případová studie (case study)** projektu do portfolia: problém → výzkum → rozhodnutí → design → výsledek se screenshoty → co ses naučila
+* Na skutečný prodej bude potřeba **živnostenský list**
 * Bílkoviny u receptů, pitný režim, filtr pro vegetariány (appka)
 * Recepty s daty pro Google (čas, kcal přímo ve výsledcích hledání)
 * **E-book pro starší a jejich blízké:** PDF i tisk, koupit v e-shopu nebo darovat (třeba rodičům). Časté potíže, jejich příčiny a jak řešit příčinu, ne jen následky; nemoci, které trápí starší lidi. Zdravotní obsah zkontroluje odborník. Mohl by být první placený produkt
@@ -156,7 +184,12 @@ Seřazené podle doporučeného pořadí.
 * Logo **Niky's krabičky** ve vektoru: `podklady/logo/` (logo-novy, logo-nalepka, logo-ikona-NK – SVG i PNG; logo-vektor-podle-originalu = věrná kopie)
 * Vizuální mapy v Miru (myšlenková mapa, persony, sitemap, flow): https://miro.com/app/board/uXjVIpEXRLo=/
 
+* **Nový web online:** https://4613nikola-oss.github.io/nikys-kitchen-web/ · kód: https://github.com/4613nikola-oss/nikys-kitchen-web
 * Appka online: https://4613nikola-oss.github.io/jidlo-od-a-z/
 * Kód appky: https://github.com/4613nikola-oss/jidlo-od-a-z
-* Kód webu (soukromý): https://github.com/4613nikola-oss/nikys-kitchen
+* Kód starého webu: https://github.com/4613nikola-oss/nikys-kitchen
+* Podklady na GitHubu: https://github.com/4613nikola-oss/nikys-kitchen-projekt
+* Shopify ukázkový obchod: https://admin.shopify.com/store/nikys-krabicky
+* E-commerce akademie (modul 16 Shopify): https://claude.ai/artifact/LMsffmgAa9jSQo5jL4Ugpm
+* Zápisek „Databáze pro Niky's Kitchen“ v Notionu: https://app.notion.com/p/4118e89419e08160afb9e772c22b1c57
 * Docker obraz: https://hub.docker.com/r/nikolapaluskova/jidlo-od-a-z

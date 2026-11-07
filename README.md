@@ -56,4 +56,4 @@ podklady/
   maskot/              maskot Tečka – nálady a proměny
 ```
 
-Repozitář je soukromý. Hesla a soukromé soubory sem nepatří (složka `soukrome/` se nenahrává).
+Repozitář je veřejný. Hesla a soukromé soubory sem nepatří (složka `soukrome/` se nenahrává).
