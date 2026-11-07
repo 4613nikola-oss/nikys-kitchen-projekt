@@ -1,7 +1,7 @@
 # Niky's Kitchen – kniha projektu
 
 Sem se zapisuje jen to, na čem jsme se v chatu **shodly**. Nápady, o kterých ještě nevíme, patří do části 💡 Nápady.
-Poslední aktualizace: 2026-10-24
+Poslední aktualizace: 2026-11-07
 
 ---
 
@@ -82,6 +82,7 @@ Poslední aktualizace: 2026-10-24
 * **2026-10-24** – **Dvě větve na GitHubu:** `dev` = rozpracované (Claude tam nahrává průběžně), `main` = hotové a živé. Do `main` jde až na pokyn Niky („nahraj to“)
 * **2026-10-24** – **Podklady jsou zálohované na GitHubu** v samostatném soukromém repozitáři `nikys-kitchen-projekt` (kniha projektu, pravidla, brainstorming, logo, maskot)
 * **2026-10-25** – **Projekt je i portfolio pro práci**: má ukázat firmám, že Niky umí spravovat e-shop (platformu, analytiku, marketing). Nástroje vybíráme i podle toho, co firmy chtějí v inzerátech
+* **2026-11-07** – **Jedna databáze pro web i appku** (PostgreSQL, běží v Dockeru). Recepty a články jsou uložené jen jednou, appka si je stahuje z webu. Když se nestáhnou, má záložní recepty a funguje dál
 * **2026-10-25** – **Obchod bude přímo součástí webu**, ne samostatný web. Všechno na jednom místě (recepty, články, appka, obchod, newsletter) je pro lidi pohodlnější a ukazuje, že Niky umí dotáhnout celý projekt
 * **2026-10-25** – **Všechno zdarma natrvalo** – žádné měsíční poplatky ani placené zkušební verze, které po měsíci začnou stát peníze
 * **2026-10-25** – **Nový web bude veřejný** (repozitář i stránka na GitHub Pages, zdarma). Veřejná zůstává i appka. **Soukromé zůstávají** podklady (obchodní plány a strategie) a starý web (písma, která možná nesmíme sdílet)
@@ -108,7 +109,9 @@ Seřazené podle doporučeného pořadí.
 * [x] Repozitář na GitHubu `nikys-kitchen-web` (soukromý) – založen a nahrán (2026-10-24)
 * [ ] SEO základ: mapa webu, data receptů pro Google, propojení CZ/EN
 * [ ] Stránky: prohlášení o přístupnosti, ochrana soukromí
-* [ ] Později: appka uvnitř webu, obchod (FAPI), databáze a přihlášení
+* [x] **Databáze:** recepty a články jsou v jedné databázi, web i appka si je berou odtud; připravené tabulky pro newsletter a obchod (2026-11-07)
+* [ ] Doplnit kcal u Koláče, ledové kávy, limonády a ginger shotu (v databázi přes Adminer) – bez nich se nedají do plánu dne v appce
+* [ ] Později: appka uvnitř webu, obchod, přihlášení, databáze na internetu pro newsletter a objednávky
 
 **Starý web a appka:**
 

@@ -22,9 +22,10 @@
 * **Nový web (od 2026-10-05):** `niky-web/` – **Next.js 16** (App Router, JavaScript, bez Tailwindu), statický export (`output: "export"`) pro GitHub Pages. Jazyky přes `app/[lang]/` (cs, en), texty v `dictionaries/*.json`. Před psaním kódu čti dokumentaci v `node_modules/next/dist/docs/` (verze se liší od tréninkových dat, viz `niky-web/AGENTS.md`). Spouštění: `docker compose up -d` → http://localhost:3000/cs/
 * **Next.js v Dockeru na Windows:** nové soubory dev server občas nezaregistruje → `docker compose restart web`. Obrázky z `public/` v `next/image` přes `asset()` z `lib/asset.js` (kvůli podsložce na hostingu)
 * **Starý web a appka:** `nikys-kitchen/` a `jidlo-od-a-z/` – čisté HTML, CSS, JS (běží dál, dokud nebude nový web hotový)
-* **Zatím ne:** databáze, přihlášení (Auth.js) – až v pozdější fázi
+* **Databáze (od 2026-11-07):** PostgreSQL 17 v `niky-web/docker-compose.yml` (+ Adminer na :8081, heslo v `.env`, vzor `.env.example`). Struktura `db/init/01-tabulky.sql`, obsah `db/init/02-data.sql` (nahraje se jen do prázdné databáze), záloha `docker compose exec db sh /db/zaloha.sh`. Web čte přes `lib/db.js` (balík `postgres` v4 – numeric vrací jako text) a `lib/content.js`. Při buildu na GitHubu běží dočasná databáze (služba v `nasazeni.yml`). Appka stahuje `api/appka.json` (pohled `appka_recepty`), záloha `js/data.js`
+* **Zatím ne:** přihlášení (Auth.js), živá databáze na internetu (newsletter a obchod potřebují server – např. Supabase)
 * **UI:** vlastní CSS, fonty Playfair Display (nadpisy) + Plus Jakarta Sans (text) z Google Fonts (v Next.js přes `next/font`)
-* **Data:** appka `jidlo-od-a-z/js/data.js` (recepty, články), uživatelská data v `localStorage`. Žádná databáze.
+* **Data:** recepty a články jen v databázi (web i appka). Uživatelská data appky v `localStorage`.
 * **Hosting:** GitHub Pages – appka i nový web (`https://4613nikola-oss.github.io/nikys-kitchen-web/`, nasazuje `.github/workflows/nasazeni.yml` po pushi na `main`, basePath `/nikys-kitchen-web`). Veřejné: appka, nový web. Soukromé: starý web (fonty s nejasnou licencí), podklady (obchodní plány)
 * **Commity** se podepisují soukromým e-mailem GitHubu (`…@users.noreply.github.com`, nastaveno globálně)
 * **Kontejnerizace:** Docker + nginx (appka), obraz `nikolapaluskova/jidlo-od-a-z` na Docker Hubu
@@ -90,8 +91,10 @@ D:\curzor_projekt\
 │   ├── SITEMAP.md, PERSONY.md, FLOW.md
 ├── niky-web\                 # 🆕 nový web v Next.js (git: 4613nikola-oss/nikys-kitchen-web, SOUKROMÝ)
 │   ├── app/[lang]/           #   stránky cs/en (recepty/[slug], clanky/[slug]…), layout.js = hlavička, patička, písma
-│   ├── data/                 #   recipes.js, articles.js – obsah webu (cs + en)
-│   ├── components/, dictionaries/, lib/ (i18n, content, asset), app/globals.css
+│   ├── db/                   #   databáze: init/01-tabulky.sql, init/02-data.sql, zaloha.sh
+│   ├── app/api/appka.json/   #   recepty pro appku (statický JSON z databáze)
+│   ├── components/, dictionaries/, lib/ (db, content, i18n, asset), app/globals.css
+│   ├── docs/ukazky/          #   screenshoty do README (WebP)
 │   ├── assets/maskot/        #   Tečka – nálady a proměny (SVG)
 │   └── docker-compose.yml    #   vývoj jen v Dockeru
 ├── jidlo-od-a-z\             # 📱 appka Jídlo od A–Z (git: 4613nikola-oss/jidlo-od-a-z, VEŘEJNÝ)
