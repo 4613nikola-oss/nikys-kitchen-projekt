@@ -11,13 +11,13 @@ Veřejně mluvíme ke všem (ženy i muži 18+). Persony pomáhají rozhodovat, 
 
 | | Persona | Věk | Hlavní cíl | Hlavní překážka | Priorita |
 |---|---|---|---|---|---|
-| 👩 | **Petra** | 28–40 | zhubnout 5–10 kg | nemá čas ani energii, appky vzdala | ⭐ hlavní |
-| 💪 | **Tomáš** | 20–35 | nabrat svaly | krabičky drahé, řeší bílkoviny | 2 |
-| 🩺 | **Jana** | 25–45 | jíst pravidelně na směny | celý den na nohou, nepravidelný režim | 3 |
-| 📱 | **Kája** | 19–25 | jíst líp a levně | krátká pozornost, málo peněz | 4 |
-| 🩸 | **Martin** | 45–60 | zhubnout kvůli zdraví | cukrovka / tlak, neví jak | 5 |
-| 🦯 | **Pavel** | 30–50 | vařit samostatně | weby nefungují se čtečkou | průřezová |
-| 🌍 | **Emma** | 25–40 | vařit z českých surovin | nemluví česky | později |
+| 👩 | **Petra** | 35 | zhubnout 5–10 kg | nemá čas ani energii, appky vzdala | ⭐ hlavní |
+| 💪 | **Tomáš** | 27 | nabrat svaly | krabičky drahé, řeší bílkoviny | 2 |
+| 🩺 | **Jana** | 38 | jíst pravidelně na směny | celý den na nohou, nepravidelný režim | 3 |
+| 📱 | **Kája** | 21 | jíst líp a levně | krátká pozornost, málo peněz | 4 |
+| 🩸 | **Martin** | 54 | zhubnout kvůli zdraví | cukrovka / tlak, neví jak | 5 |
+| 🦯 | **Pavel** | 41 | vařit samostatně | weby nefungují se čtečkou | průřezová |
+| 🌍 | **Emma** | 31 | vařit z českých surovin | nemluví česky | později |
 
 ---
 
