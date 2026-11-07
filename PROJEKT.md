@@ -126,6 +126,7 @@ Seřazené podle doporučeného pořadí.
 9. [ ] **Anglická verze celého webu a appky** (texty připravovat na překlad už od teď)
 
 **Hotovo:**
+* [x] **Nový web je online** na https://4613nikola-oss.github.io/nikys-kitchen-web/ (zdarma přes GitHub Pages); appka si z něj bere recepty z databáze (2026-11-07)
 * [x] Zabezpečení GitHubu: pojistka proti nahrání hesel ve všech repozitářích, u veřejné appky zapnutá ochrana Secret Protection + Push protection, podklady zálohované v soukromém repozitáři (2026-10-24)
 * [x] Appka upozorní, když se údaje neukládají (anonymní okno); v hlavičce značka Niky's Kitchen (2026-10-03)
 * [x] Appka na GitHubu, v Dockeru a veřejně online (2026-09-26)
