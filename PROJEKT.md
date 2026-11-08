@@ -92,7 +92,7 @@ Poslední aktualizace: 2026-11-07
 * **2026-10-25** – **Obchod bude přímo součástí webu**, ne samostatný web. Všechno na jednom místě (recepty, články, appka, obchod, newsletter) je pro lidi pohodlnější a ukazuje, že Niky umí dotáhnout celý projekt
 * **2026-10-25** – **Všechno zdarma natrvalo** – žádné měsíční poplatky ani placené zkušební verze, které po měsíci začnou stát peníze
 * **2026-10-25** – **Nový web bude veřejný** (repozitář i stránka na GitHub Pages, zdarma). Veřejná zůstává i appka. ~~Soukromé zůstávají podklady a starý web~~ – změněno 7. 11., všechno je veřejné (písma ze starého webu nahrazena)
-* **2026-11-07** – **Všechny repozitáře jsou veřejné** (rozhodla Niky): nový web, appka, starý web i podklady. Hesla a soukromé soubory hlídá pojistka `.gitignore`
+* **2026-11-08** – **Ceny produktů** (podle průzkumu trhu a plánu „zdarma přivede → malá placená věc → větší nabídka“): Startovací knížka zdarma za e-mail, Týdenní plán 99 Kč, e-book Jeden základ, tři varianty 249 Kč, e-book pro starší 249 Kč, Kurz vaření dopředu 990 Kč (zaváděcí 690 Kč), Online kuchařka 129 Kč/měsíc. Krabičky v Shopify: Fit 149, Standard 159, Svaly 179 Kč za oběd`n* **2026-11-08** – **Na webu jsou v obchodě všechny produkty** s obálkou, cenou, popisem a ukázkou zdarma (u plánu celý den ze skutečných receptů + PDF). Zatím „připravujeme“`n* **2026-11-08** – **Ukázkový Shopify obchod má 3 typy zboží:** krabičky, digitální produkty a merch s Tečkou (magnetky, kolíčky, nálepky, sklenice na kaši, krabička na jídlo, taška). Merch jen v Shopify, ne na webu`n* **2026-11-07** – **Všechny repozitáře jsou veřejné** (rozhodla Niky): nový web, appka, starý web i podklady. Hesla a soukromé soubory hlídá pojistka `.gitignore`
 * **2026-11-07** – **Shopify vývojářský obchod jde do portfolia** (zdarma, bez placených aplikací). Učení „jednou Claude, podruhé Niky“: Claude udělá jednu věc, Niky tu další sama v administraci, Claude zkontroluje
 * **2026-11-07** – **Persony mají přesný věk** (Petra 35, Tomáš 27, Jana 38, Kája 21, Martin 54, Pavel 41, Emma 31) a profilové fotky (Niky je doplňuje v Miru)
 * **2026-10-03** – Design musí být **responzivní** (mobil, tablet, počítač)
@@ -125,7 +125,7 @@ Seřazené podle doporučeného pořadí.
 **Shopify – ukázkový obchod do portfolia** (úkoly i návody jsou v E-commerce akademii, modul 16):
 * [x] Smazat 17 ukázkových produktů od Shopify, opravit překlep „obět“ → „oběd“ (2026-11-07)
 * [ ] Přejmenovat obchod (doporučení: **Niky's Kitchen**), měna CZK, země Česko, časové pásmo Praha – Niky v Nastavení
-* [ ] Obědy úterý až pátek (Niky sama podle pondělního vzoru)
+* [x] Digitální produkty (6) a merch (6) s obrázky, ceny krabiček, digitální bez dopravy (2026-11-08)`n* [ ] Obědy úterý až pátek (Niky sama podle pondělního vzoru)
 * [ ] Kolekce, slevový kód VITEJ10, testovací objednávka a její vyřízení
 * [ ] Téma obchodu na GitHub (repozitář `nikys-kitchen-shopify`)
 * [ ] Case study do portfolia (web, appka, databáze, Shopify)
