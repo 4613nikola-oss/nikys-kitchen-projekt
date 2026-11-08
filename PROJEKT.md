@@ -83,18 +83,18 @@ ikys-krabicky.myshopify.com`, zdarma bez limitu. Ukázková data od Shopify smaz
 * **2026-10-03** – **Obchod prodává digitální produkty**, ne vařená jídla (krabičky = moc práce, sklad, rozvoz). Krabičky odloženy
 * **2026-10-03** – **Nejdřív malý placený produkt**, ne všechno zdarma – zdarma jen to, co přivádí lidi (blog, část receptů, základní kalkulačka)
 * **2026-10-05** – **Sociální sítě spouštíme hned**: Instagram a Facebook teď, Pinterest až bude web online, TikTok později. Startovní balíček v `podklady/SOCIALNI-SITE.md`
-* **2026-10-05** – **Nový web v Next.js** (mění rozhodnutí z 24. 9.): web, appka a obchod časem v jednom projektu 
-iky-web`, dvě jazykové verze, statický web na GitHub Pages. Starý web a appka běží dál, dokud nebude nový hotový
+* **2026-10-05** – **Nový web v Next.js** (mění rozhodnutí z 24. 9.): web, appka a obchod časem v jednom projektu `niky-web`, dvě jazykové verze, statický web na GitHub Pages. Starý web a appka běží dál, dokud nebude nový hotový
 * **2026-10-05** – Postup po fázích: **Fáze 0** nastavení projektu → **Fáze 1** kostra a design webu → dál detaily. **Databáze a přihlášení až později**
 * **2026-10-05** – Příkazy (instalace, buildy, testy) se spouštějí **jen v Dockeru**, nic se neinstaluje přímo do počítače. Práce probíhá ve fázích: nejdřív struktura, pak detaily, průběžná kontrola v prohlížeči
 * **2026-10-24** – **Dvě větve na GitHubu:** `dev` = rozpracované (Claude tam nahrává průběžně), `main` = hotové a živé. Do `main` jde až na pokyn Niky („nahraj to“)
-* **2026-10-24** – **Podklady jsou zálohované na GitHubu** v samostatném soukromém repozitáři 
-ikys-kitchen-projekt` (kniha projektu, pravidla, brainstorming, logo, maskot)
+* **2026-10-24** – **Podklady jsou zálohované na GitHubu** v samostatném soukromém repozitáři `nikys-kitchen-projekt` (kniha projektu, pravidla, brainstorming, logo, maskot)
 * **2026-10-25** – **Projekt je i portfolio pro práci**: má ukázat firmám, že Niky umí spravovat e-shop (platformu, analytiku, marketing). Nástroje vybíráme i podle toho, co firmy chtějí v inzerátech
 * **2026-11-07** – **Jedna databáze pro web i appku** (PostgreSQL, běží v Dockeru). Recepty a články jsou uložené jen jednou, appka si je stahuje z webu. Když se nestáhnou, má záložní recepty a funguje dál
 * **2026-10-25** – **Obchod bude přímo součástí webu**, ne samostatný web. Všechno na jednom místě (recepty, články, appka, obchod, newsletter) je pro lidi pohodlnější a ukazuje, že Niky umí dotáhnout celý projekt
 * **2026-10-25** – **Všechno zdarma natrvalo** – žádné měsíční poplatky ani placené zkušební verze, které po měsíci začnou stát peníze
 * **2026-10-25** – **Nový web bude veřejný** (repozitář i stránka na GitHub Pages, zdarma). Veřejná zůstává i appka. ~~Soukromé zůstávají podklady a starý web~~ – změněno 7. 11., všechno je veřejné (písma ze starého webu nahrazena)
+* **2026-11-08** – **Postup po fázích A–E:** A opravy webu a appky → B vzhled (3 varianty pozadí, Tečka překreslená do stylu loga, vlastní ikonky, mikroanimace) → C nová appka uvnitř webu (plán den/týden/měsíc, profil s průvodcem, filtry, oblíbené, nákup na týden) → D přihlášení (avatar, historie, newsletter) → E komunita (hodnocení, sekce Od babičky)
+* **2026-11-08** – **Kcal u receptů spočítané orientačně** z množství surovin (Koláč 520, ledová káva 100, limonáda 30, ginger shot 40 kcal na porci). Niky je může upravit v Admineru
 * **2026-11-08** – **Ceny produktů** (podle průzkumu trhu a plánu „zdarma přivede → malá placená věc → větší nabídka“): Startovací knížka zdarma za e-mail, Týdenní plán 99 Kč, e-book Jeden základ, tři varianty 249 Kč, e-book pro starší 249 Kč, Kurz vaření dopředu 990 Kč (zaváděcí 690 Kč), Online kuchařka 129 Kč/měsíc. Krabičky v Shopify: Fit 149, Standard 159, Svaly 179 Kč za oběd
 * **2026-11-08** – **Na webu jsou v obchodě všechny produkty** s obálkou, cenou, popisem a ukázkou zdarma (u plánu celý den ze skutečných receptů + PDF). Zatím „připravujeme“
 * **2026-11-08** – **Ukázkový Shopify obchod má 3 typy zboží:** krabičky, digitální produkty a merch s Tečkou (magnetky, kolíčky, nálepky, sklenice na kaši, krabička na jídlo, taška). Merch jen v Shopify, ne na webu
@@ -115,19 +115,22 @@ Seřazené podle doporučeného pořadí.
 * [ ] Vybrat název účtu a založit Instagram + stránku na Facebooku (Niky)
 * [ ] Prvních 14 dní podle plánu v `podklady/SOCIALNI-SITE.md`
 
-**Nový web v Next.js (
-iky-web`):**
+**Nový web v Next.js (`niky-web`):**
 * [x] **Fáze 0:** nastavení projektu – instalace, Docker, struktura stránek, čeština a angličtina, barvy a písma, logo, prázdné stránky (2026-10-05)
 * [x] **Fáze 1 (první verze):** 17 receptů (6 slaných, 5 sladkých, 6 nápojů) a 6 článků česky i anglicky, propojené mezi sebou; paleta šalvěj/med/terakota; Tečka na úvodu, v kartách, na 404 a v patičce; přepočet porcí; fotky ve WebP (2026-10-05)
 * [ ] Doladit podle moodboardu ve Figmě
 * [ ] Niky zkontroluje ukázkové recepty (množství, postup, kcal) a doplní kcal u Koláče, ledové kávy, limonády a ginger shotu
 * [ ] Skutečné fotky místo AI ilustrací u Koláče
-* [x] Repozitář na GitHubu 
-ikys-kitchen-web` (soukromý) – založen a nahrán (2026-10-24)
+* [x] Repozitář na GitHubu `nikys-kitchen-web` (soukromý) – založen a nahrán (2026-10-24)
 * [ ] SEO základ: mapa webu, data receptů pro Google, propojení CZ/EN
 * [ ] Stránky: prohlášení o přístupnosti, ochrana soukromí
 * [x] **Databáze:** recepty a články jsou v jedné databázi, web i appka si je berou odtud; připravené tabulky pro newsletter a obchod (2026-11-07)
-* [ ] Doplnit kcal u Koláče, ledové kávy, limonády a ginger shotu (v databázi přes Adminer) – bez nich se nedají do plánu dne v appce
+* [x] Kcal u Koláče, ledové kávy, limonády a ginger shotu – spočítané orientačně (2026-11-08)
+
+**Fáze A – opravy (2026-11-08):**
+* [x] Web: filtry receptů (kategorie, štítky, bez alergenu), hledání s překlepy a nabídkou podobných, „Načíst další“, kcal i při změně porcí, alergeny žlutě s trojúhelníkem, varianty jako karty po dnech
+* [x] Appka: celá karta klikací, kontrastní tlačítka, chytré hledání, odkaz zpět na web, tipy na obchod
+* [ ] Niky: fotky jídel podle připraveného promptu, příběh pro O mně, recepty od babičky
 * [ ] Později: appka uvnitř webu, obchod, přihlášení, databáze na internetu pro newsletter a objednávky
 
 **Shopify – ukázkový obchod do portfolia** (úkoly i návody jsou v E-commerce akademii, modul 16):
@@ -136,8 +139,7 @@ ikys-kitchen-web` (soukromý) – založen a nahrán (2026-10-24)
 * [x] Digitální produkty (6) a merch (6) s obrázky, ceny krabiček, digitální bez dopravy (2026-11-08)
 * [ ] Obědy úterý až pátek (Niky sama podle pondělního vzoru)
 * [ ] Kolekce, slevový kód VITEJ10, testovací objednávka a její vyřízení
-* [ ] Téma obchodu na GitHub (repozitář 
-ikys-kitchen-shopify`)
+* [ ] Téma obchodu na GitHub (repozitář `nikys-kitchen-shopify`)
 * [ ] Case study do portfolia (web, appka, databáze, Shopify)
 
 **Persony a výzkum:**
