@@ -122,8 +122,12 @@ Seřazené podle doporučeného pořadí.
 * [ ] Niky zkontroluje ukázkové recepty (množství, postup, kcal) a doplní kcal u Koláče, ledové kávy, limonády a ginger shotu
 * [ ] Skutečné fotky místo AI ilustrací u Koláče
 * [x] Repozitář na GitHubu `nikys-kitchen-web` (soukromý) – založen a nahrán (2026-10-24)
-* [ ] SEO základ: mapa webu, data receptů pro Google, propojení CZ/EN
-* [ ] Stránky: prohlášení o přístupnosti, ochrana soukromí
+* [x] SEO základ: mapa webu, data receptů pro Google (čas, kcal, suroviny), propojení CZ/EN, náhledy při sdílení (2026-11-09)
+* [x] Stránky: prohlášení o přístupnosti, ochrana soukromí, odkazy v patičce (2026-11-09)
+* [x] Recept jde vytisknout nebo uložit jako PDF (2026-11-09)
+* [ ] Doplnit kontakt na ochranu soukromí a přístupnost (e-mail značky) – nejpozději před newsletterem a obchodem
+* [ ] Až bude web online s novými stránkami: přidat ho do Google Search Console a odeslat mapu webu (sitemap.xml)
+* [ ] Před spuštěním newsletteru nebo obchodu nechat ochranu soukromí zkontrolovat (nejde o právní radu)
 * [x] **Databáze:** recepty a články jsou v jedné databázi, web i appka si je berou odtud; připravené tabulky pro newsletter a obchod (2026-11-07)
 * [x] Kcal u Koláče, ledové kávy, limonády a ginger shotu – spočítané orientačně (2026-11-08)
 
