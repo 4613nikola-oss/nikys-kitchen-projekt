@@ -1,0 +1,581 @@
+<title>Vzhled Niky's Kitchen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap">
+<style>
+/* Layout: jedna čtecí kolona, každá sekce = jedno rozhodnutí; návrhy jsou „kousky webu“ vedle sebe k porovnání */
+:root {
+  --bg: #f6f7f4;
+  --surface: #ffffff;
+  --ink: #232a20;
+  --muted: #5d665a;
+  --line: #dfe3dc;
+  --accent: #3d5233;
+  --accent-ink: #ffffff;
+  --mark: #a24e33;
+  --display: "Playfair Display", Georgia, serif;
+  --body: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #151a14; --surface: #1d241b; --ink: #e9ede6; --muted: #a8b2a3; --line: #2f392c; --accent: #9fbf8f; --accent-ink: #151a14; --mark: #e69a7e; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #151a14; --surface: #1d241b; --ink: #e9ede6; --muted: #a8b2a3; --line: #2f392c; --accent: #9fbf8f; --accent-ink: #151a14; --mark: #e69a7e; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 32px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 6vw, 46px); }
+h2 { font-size: clamp(24px, 4vw, 32px); }
+h3 { font-size: 20px; }
+p { max-width: 65ch; margin: 8px 0; }
+.lead { color: var(--muted); font-size: 18px; }
+.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--mark); }
+section.block { margin-top: 56px; display: grid; gap: 16px; }
+.ask { border-left: 4px solid var(--mark); background: var(--surface); padding: 12px 16px; border-radius: 0 12px 12px 0; }
+.ask strong { color: var(--mark); }
+.grid3 { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid2 { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.option { display: grid; gap: 10px; min-width: 0; }
+.option-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.option-letter { font-family: var(--display); font-weight: 700; font-size: 22px; color: var(--accent); }
+.option p { margin: 0; color: var(--muted); font-size: 14px; }
+:focus-visible { outline: 3px solid var(--mark); outline-offset: 2px; }
+
+/* ---------- Náhledy webu (pevné barvy značky – jsou to vzorky, v obou motivech stejné) ---------- */
+.mock { border-radius: 14px; overflow: hidden; border: 1px solid #d9d6cc; color: #2c2c2c; font-family: var(--body); }
+.mock-bar { display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: #fff; border-bottom: 1px solid #e3ded5; }
+.mock-bar img { width: 26px; height: 26px; }
+.mock-bar b { font-family: var(--display); color: #3d5233; font-size: 14px; }
+.mock-bar span { margin-left: auto; font-size: 11px; color: #3d5233; font-weight: 600; }
+.mock-body { padding: 18px 14px 20px; display: grid; gap: 12px; }
+.mock-h { font-family: var(--display); font-weight: 700; color: #3d5233; font-size: 21px; line-height: 1.1; }
+.mock-btn { justify-self: start; background: #3d5233; color: #fff; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 700; }
+.mock-card { background: #fff; border-radius: 12px; border: 1px solid #e3ded5; padding: 10px; display: grid; grid-template-columns: 70px 1fr; gap: 10px; align-items: center; box-shadow: 0 2px 10px rgba(44,44,44,.06); }
+.mock-card img { width: 70px; height: 56px; object-fit: cover; border-radius: 8px; }
+.mock-card b { font-family: var(--display); color: #3d5233; font-size: 14px; display: block; }
+.mock-card small { color: #6b6b6b; font-size: 11px; }
+.bgA { background-color: #edf1ec; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%235e7769' stroke-opacity='.22' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M18 30c8-12 22-12 26-2-10 6-22 6-26 2z M18 30l-8 6'/%3E%3Cpath d='M78 18v26 M73 18v8c0 3 2 5 5 5s5-2 5-5v-8'/%3E%3Cpath d='M30 92c6-8 6-18 0-26 M30 92c-6-8-6-18 0-26 M30 66v34'/%3E%3Cpath d='M86 80c10 0 14 8 10 16-8 2-14-6-10-16z'/%3E%3Ccircle cx='60' cy='60' r='2.4' fill='%235e7769' fill-opacity='.22' stroke='none'/%3E%3C/g%3E%3C/svg%3E"); }
+.bgB { background-color: #f8ece6; background-image: linear-gradient(90deg, rgba(162,78,51,.07) 50%, transparent 50%), linear-gradient(rgba(162,78,51,.07) 50%, transparent 50%); background-size: 28px 28px; }
+.bgC { background-color: #f4f6f2; }
+.bgC .mock-bar { background: #3d5233; border-bottom: 0; background-image: radial-gradient(rgba(191,169,127,.35) 1.4px, transparent 1.6px); background-size: 14px 14px; }
+.bgC .mock-bar b, .bgC .mock-bar span { color: #fff; }
+.bgC .mock-card { border: 0; box-shadow: 0 4px 16px rgba(44,44,44,.1); }
+
+/* ---------- Tečka ---------- */
+.tecky { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.tecka-panel { background: #fbfaf6; border: 1px solid #e3ded5; border-radius: 14px; padding: 16px; color: #2c2c2c; display: grid; gap: 12px; }
+.tecka-panel h3 { color: #3d5233; }
+.tecka-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.tecka-row img, .tecka-row svg { width: 92px; height: 92px; }
+.tecka-row .logo { width: 72px; height: 72px; }
+.tecka-panel p { font-size: 14px; color: #5d5d5d; margin: 0; }
+
+/* ---------- Ikonky ---------- */
+.icons { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); }
+.icon { background: #fbfaf6; border: 1px solid #e3ded5; border-radius: 12px; padding: 14px 8px 10px; display: grid; justify-items: center; gap: 6px; color: #2c2c2c; }
+.icon svg { width: 44px; height: 44px; }
+.icon span { font-size: 13px; font-weight: 600; text-align: center; }
+.icon-compare { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 14px; color: var(--muted); }
+.icon-compare .chip { display: inline-flex; gap: 6px; align-items: center; background: #eef2ef; color: #3d5233; border-radius: 999px; padding: 4px 12px; font-weight: 700; font-size: 13px; }
+.icon-compare .chip svg { width: 18px; height: 18px; }
+
+/* ---------- Avatary ---------- */
+.avatars { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); }
+.avatar { margin: 0; background: #fbfaf6; border: 1px solid #e3ded5; border-radius: 14px; padding: 10px; display: grid; justify-items: center; gap: 4px; color: #2c2c2c; }
+.avatar svg { width: 76px; height: 76px; border-radius: 50%; background: #eef2ef; }
+.avatar figcaption { font-size: 13px; font-weight: 600; }
+.profile-chip { justify-self: start; display: flex; gap: 10px; align-items: center; background: #fff; color: #2c2c2c; border: 2px solid #3d5233; border-radius: 999px; padding: 6px 16px 6px 6px; }
+.profile-chip svg { width: 44px; height: 44px; border-radius: 50%; background: #eef2ef; }
+.profile-chip b { display: block; color: #3d5233; }
+.profile-chip small { color: #5d5d5d; }
+
+/* ---------- Další pozadí ---------- */
+.bgD { background-color: #e6ede4; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='%235e7769' fill-opacity='.13'%3E%3Cpath d='M30 60c14-26 44-26 50-6-18 16-38 16-50 6z'/%3E%3Cpath d='M110 120c10-20 34-22 40-6-14 12-30 14-40 6z'/%3E%3Cpath d='M118 30c6-14 22-14 26-4-9 8-19 9-26 4z'/%3E%3C/g%3E%3C/svg%3E"); }
+.bgE { background-color: #f1eee8; background-image: repeating-linear-gradient(0deg, rgba(120,100,70,.05) 0 1px, transparent 1px 4px), repeating-linear-gradient(90deg, rgba(120,100,70,.05) 0 1px, transparent 1px 4px); }
+.bgF { background-color: #ffffff; background-image: radial-gradient(circle at 12% 18%, rgba(191,169,127,.20) 0 34px, transparent 35px), radial-gradient(circle at 88% 70%, rgba(94,119,105,.16) 0 48px, transparent 49px), radial-gradient(circle at 60% 110%, rgba(162,78,51,.10) 0 60px, transparent 61px); }
+
+/* ---------- Karty: teď vs. nově ---------- */
+.cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: start; }
+.card-now { background: #fff; border: 1px solid #e3ded5; border-radius: 16px; overflow: hidden; color: #2c2c2c; }
+.card-now .media { aspect-ratio: 16/9; background: #f7f0e1; display: grid; place-items: center; }
+.card-now .media img { width: 46%; }
+.card-now .body { padding: 14px 18px 18px; }
+.card-now .chip { background: #eef2ef; color: #3d5233; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 700; }
+.card-now b { display: block; font-family: var(--display); color: #3d5233; font-size: 18px; margin: 6px 0; }
+.card-now small { color: #6b6b6b; }
+.card-new { background: #fff; border-radius: 16px; overflow: hidden; color: #2c2c2c; box-shadow: 0 6px 22px rgba(44,44,44,.12); border-top: 6px solid #a24e33; }
+.polaroid-wrap { background: #f8ece6; padding: 22px 0 12px; display: grid; place-items: center; }
+.polaroid { position: relative; background: #fff; padding: 9px 9px 30px; box-shadow: 0 6px 14px rgba(44,44,44,.18); transform: rotate(-2.5deg); width: 72%; }
+.polaroid img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.polaroid figcaption { position: absolute; bottom: 7px; left: 0; right: 0; text-align: center; font-family: var(--display); font-style: italic; font-size: 13px; color: #5d5d5d; }
+.pin { position: absolute; top: -9px; left: 50%; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #e3866a, #a24e33 70%); box-shadow: 0 2px 3px rgba(0,0,0,.3); }
+.card-new .body { padding: 14px 18px 18px; display: grid; gap: 8px; }
+.card-new .cat { justify-self: start; background: #a24e33; color: #fff; border-radius: 999px; padding: 3px 12px; font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+.card-new h3 { font-size: 22px; color: #3d5233; }
+.facts-new { display: flex; gap: 8px; flex-wrap: wrap; }
+.fact { display: inline-flex; align-items: center; gap: 6px; background: #eef2ef; color: #2c3a28; border-radius: 10px; padding: 6px 10px; font-weight: 700; font-size: 13px; }
+.fact svg { width: 18px; height: 18px; }
+.fact.warn { background: #fef3c7; border: 1px solid #f59e0b; }
+.card-new .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.save { display: inline-flex; gap: 6px; align-items: center; border: 2px solid #3d5233; color: #3d5233; border-radius: 999px; padding: 5px 12px; font-weight: 700; font-size: 13px; background: #fff; }
+.save svg { width: 16px; height: 16px; }
+
+/* ---------- Animace ---------- */
+.anims { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.anim { background: #fbfaf6; border: 1px solid #e3ded5; border-radius: 14px; padding: 14px; display: grid; gap: 10px; color: #2c2c2c; }
+.anim svg { width: 100%; height: auto; display: block; background: #fff; border-radius: 10px; }
+.anim h3 { color: #3d5233; font-size: 18px; }
+.anim p { font-size: 14px; color: #5d5d5d; margin: 0; }
+.replay { justify-self: start; font: inherit; font-weight: 700; font-size: 14px; background: #3d5233; color: #fff; border: 0; border-radius: 999px; padding: 8px 16px; cursor: pointer; min-height: 40px; }
+.replay:hover { background: #2e3e26; }
+
+/* 1) koláč do trouby */
+.play .pie { animation: pieRide 2.6s ease-in-out forwards; }
+.play .door { animation: doorClose .7s 2.4s ease-in forwards; }
+.play .glow { animation: glow 1.2s 3.1s ease-in-out infinite alternate; }
+@keyframes pieRide { 0% { transform: translateX(0); } 75% { transform: translateX(200px); } 100% { transform: translateX(200px); } }
+@keyframes doorClose { from { transform: scaleY(.08); } to { transform: scaleY(1); } }
+@keyframes glow { from { opacity: .15; } to { opacity: .55; } }
+.door { transform-box: fill-box; transform-origin: bottom; transform: scaleY(.08); }
+.glow { opacity: 0; }
+
+/* 2) košík a padající suroviny (každá dopadne na své místo, košík se zhoupne) */
+.item { opacity: 0; }
+.play .item { animation: drop .8s cubic-bezier(.45,0,.7,1.35) forwards; }
+.play .i2 { animation-delay: .35s; } .play .i3 { animation-delay: .7s; } .play .i4 { animation-delay: 1.05s; } .play .i5 { animation-delay: 1.4s; } .play .i6 { animation-delay: 1.75s; }
+@keyframes drop { 0% { opacity: 0; transform: translateY(-110px) rotate(-12deg); } 20% { opacity: 1; } 100% { opacity: 1; transform: translateY(0) rotate(0); } }
+.basket { transform-box: fill-box; transform-origin: bottom center; }
+.play .basket { animation: wobble .5s 2.5s ease-in-out; }
+@keyframes wobble { 0%, 100% { transform: rotate(0); } 30% { transform: rotate(-3deg); } 70% { transform: rotate(3deg); } }
+.play .bag-done { animation: pop .5s 2.6s ease-out forwards; }
+.bag-done { opacity: 0; transform-box: fill-box; transform-origin: center; }
+@keyframes pop { 0% { opacity: 0; transform: scale(.4); } 70% { opacity: 1; transform: scale(1.15); } 100% { opacity: 1; transform: scale(1); } }
+
+/* 3) Tečka → dort */
+.morph-a, .morph-b, .spark { transform-box: fill-box; transform-origin: center; }
+.morph-b { opacity: 0; }
+.play .morph-a { animation: out .6s .4s ease-in forwards; }
+.play .morph-b { animation: in .7s .9s cubic-bezier(.3,1.5,.6,1) forwards; }
+.play .spark { animation: spark .8s 1.2s ease-out forwards; }
+.spark { opacity: 0; }
+@keyframes out { to { opacity: 0; transform: scale(.2) rotate(-20deg); } }
+@keyframes in { from { opacity: 0; transform: scale(.3); } to { opacity: 1; transform: scale(1); } }
+@keyframes spark { 0% { opacity: 0; transform: scale(.4); } 50% { opacity: 1; } 100% { opacity: 0; transform: scale(1.6); } }
+
+/* 4) odškrtnutí na nákupu */
+.check-path { stroke-dasharray: 30; stroke-dashoffset: 30; }
+.play .check-path { animation: draw .45s ease-out forwards; }
+.play .c2 .check-path { animation-delay: .6s; } .play .c3 .check-path { animation-delay: 1.2s; }
+.strike { stroke-dasharray: 160; stroke-dashoffset: 160; }
+.play .strike { animation: draw .4s .3s ease-out forwards; }
+.play .c2 .strike { animation-delay: .9s; } .play .c3 .strike { animation-delay: 1.5s; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .play *, .play { animation: none !important; }
+  .door, .morph-b, .bag-done, .item { transform: none; opacity: 1; }
+  .morph-a { opacity: 0; }
+  .check-path, .strike { stroke-dashoffset: 0; }
+}
+
+.choose { background: var(--surface); border: 2px solid var(--accent); border-radius: 16px; padding: 18px; display: grid; gap: 8px; }
+.choose code { font-family: ui-monospace, Consolas, monospace; background: var(--bg); padding: 2px 6px; border-radius: 6px; }
+</style>
+
+<!-- Ikonky jako symboly: tenká linka ve stylu loga + šalvějový lístek Tečky -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="listek"><path d="M17.5 3.2c1.6-1.4 3.6-1.4 4.6-.6-.8 1.8-2.8 2.6-4.6.6z" fill="#5e7769" stroke="#3d5233" stroke-width=".7"/></g>
+    <symbol id="i-cas" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="13" r="8"/><path d="M11 8.5V13l3 2"/></g><use href="#listek"/></symbol>
+    <symbol id="i-kcal" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3c1 3.2 5 5 5 10a5 5 0 0 1-10 0c0-2.4 1.2-3.8 2.4-4.8.2 1.8 1 2.8 2.4 3 .4-3.4-1.2-5.4.2-8.2z"/></g><use href="#listek"/></symbol>
+    <symbol id="i-porce" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13.5" r="7.5"/><circle cx="13" cy="13.5" r="4"/><path d="M3 5v5a1.5 1.5 0 0 0 3 0V5M4.5 10v11"/></g><use href="#listek"/></symbol>
+    <symbol id="i-slane" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a2 2 0 0 0 4 0V3M8 9v12"/><path d="M15 21V3c2.5 1.2 3.5 4 3.5 7.5H15"/></g><use href="#listek"/></symbol>
+    <symbol id="i-sladke" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h17V12L3 15.5z"/><path d="M3 15.5 17 9.5"/><path d="M3 17.2h17"/></g><circle cx="16" cy="7.4" r="1.8" fill="#a24e33"/><use href="#listek"/></symbol>
+    <symbol id="i-napoje" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h12l-1.6 13.5H6.6z"/><path d="M13 7l2.5-5"/><path d="M6 12h10"/></g><use href="#listek"/></symbol>
+    <symbol id="i-alergen" viewBox="0 0 24 24"><path d="M11 3 21 20H1z" fill="#f59e0b" stroke="#2c2c2c" stroke-width="1.5" stroke-linejoin="round"/><path d="M11 9v5" stroke="#2c2c2c" stroke-width="1.9" stroke-linecap="round"/><circle cx="11" cy="16.8" r="1.1" fill="#2c2c2c"/></symbol>
+    <symbol id="i-lednicka" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="12" height="18.5" rx="2"/><path d="M5 9.5h12M8 6v1.5M8 12.5v3"/></g><use href="#listek"/></symbol>
+    <symbol id="i-nakup" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5h14l-1.3 12H5.3z"/><path d="M8 8.5V7a3 3 0 0 1 6 0v1.5"/></g><use href="#listek"/></symbol>
+    <symbol id="i-profil" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="9" r="4"/><path d="M3.5 21c1.4-4 4.2-6 7.5-6s6.1 2 7.5 6"/></g><use href="#listek"/></symbol>
+    <symbol id="i-den" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="16" height="16" rx="2"/><path d="M3 10h16M7.5 3v4M14.5 3v4"/><circle cx="11" cy="15.5" r="1.6" fill="#a24e33" stroke="none"/></g><use href="#listek"/></symbol>
+    <symbol id="i-recepty" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H17v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H17v-5"/><path d="M8 7.5h5M8 11h5"/></g><use href="#listek"/></symbol>
+    <symbol id="i-oblibene" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 11 7.6 4.2 4.2 0 0 1 18.5 10c0 5.4-7.5 10-7.5 10z"/></g><use href="#listek"/></symbol>
+    <symbol id="i-vari" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11h15v5.5a4 4 0 0 1-4 4h-7a4 4 0 0 1-4-4z"/><path d="M1.5 11h2M18.5 11h2M8 7.5c-.6-1 .6-2 0-3M12 7.5c-.6-1 .6-2 0-3"/></g><use href="#listek"/></symbol>
+
+    <!-- další ikonky -->
+    <symbol id="i-snidane" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h13v5a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M16 11.5h1.5a2.5 2.5 0 0 1 0 5H15.6"/><path d="M7 7c-.5-1 .5-2 0-3M11 7c-.5-1 .5-2 0-3"/></g><use href="#listek"/></symbol>
+    <symbol id="i-vecere" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="15" r="6.5"/><circle cx="11" cy="15" r="3"/><path d="M17.5 3.5a3.5 3.5 0 1 0 3 5.5 4 4 0 0 1-3-5.5z" fill="#bfa97f" stroke="#3d5233"/></g></symbol>
+    <symbol id="i-svacina" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 8c-3-2-8-1-8 5s3 9 5 9c1.3 0 2-.6 3-.6s1.7.6 3 .6c2 0 5-3 5-9s-5-7-8-5z"/><path d="M11 8c0-2 .6-3.5 2-4.5"/></g><use href="#listek"/></symbol>
+    <symbol id="i-hledat" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="11" r="6.5"/><path d="M15 16l5.5 5.5"/></g><use href="#listek"/></symbol>
+    <symbol id="i-filtr" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h16M6 12h10M9 18h4"/></g><use href="#listek"/></symbol>
+    <symbol id="i-tyden" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="16" height="16" rx="2"/><path d="M3 10h16M7.5 3v4M14.5 3v4"/></g><g fill="#5e7769"><circle cx="6.5" cy="13.5" r="1"/><circle cx="9.5" cy="13.5" r="1"/><circle cx="12.5" cy="13.5" r="1"/><circle cx="15.5" cy="13.5" r="1"/><circle cx="6.5" cy="17" r="1"/><circle cx="9.5" cy="17" r="1"/><circle cx="12.5" cy="17" r="1" fill="#a24e33"/></g><use href="#listek"/></symbol>
+    <symbol id="i-stahnout" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h8l4 4v14H5z"/><path d="M13 3v4h4"/><path d="M11 10v7M8 14l3 3 3-3"/></g></symbol>
+    <symbol id="i-vege" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19C5 10 10 5 19 4c0 9-5 15-14 15z" fill="#eef2ef"/><path d="M5 19 14 10"/></g></symbol>
+    <symbol id="i-bezlepku" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21V8"/><path d="M11 9c-2-1-3-3-3-5 2 0 3 1.5 3 3M11 9c2-1 3-3 3-5-2 0-3 1.5-3 3M11 14c-2-1-3-3-3-5 2 0 3 1.5 3 3M11 14c2-1 3-3 3-5-2 0-3 1.5-3 3"/></g><path d="M3 21 20 4" stroke="#a24e33" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-trouba" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="17" height="18" rx="2"/><path d="M3 8h17"/><rect x="6" y="11" width="11" height="7" rx="1"/><circle cx="7" cy="5.5" r=".6"/><circle cx="10" cy="5.5" r=".6"/></g><use href="#listek"/></symbol>
+    <symbol id="i-babicka" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15 15 5a2.5 2.5 0 0 1 3.5 3.5l-10 10A2.5 2.5 0 0 1 5 15z"/><path d="M3.5 20.5l2-2M18.5 5.5l2-2"/></g><path d="M11 9.5c0-1.2 1.6-1.6 2-.5.4-1.1 2-.7 2 .5 0 1.3-2 2.5-2 2.5s-2-1.2-2-2.5z" fill="#a24e33"/></symbol>
+    <symbol id="i-newsletter" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="17" height="13" rx="2"/><path d="M2.5 8l8.5 6 8.5-6"/></g><use href="#listek"/></symbol>
+    <symbol id="i-kosik" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10c0-7 12-7 12 0"/><path d="M2.5 10h17l-2 10h-13z"/><path d="M8 13v4M11 13v4M14 13v4"/></g></symbol>
+    <symbol id="i-zvonek" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17V11a6 6 0 0 1 12 0v6l1.5 2h-15z"/><path d="M9 21a2 2 0 0 0 4 0"/></g><use href="#listek"/></symbol>
+    <symbol id="i-nastaveni" viewBox="0 0 24 24"><g fill="none" stroke="#3d5233" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="12" r="3"/><path d="M11 3v2.5M11 18.5V21M3 12h2.5M16.5 12H19M5.3 6.3l1.8 1.8M14.9 15.9l1.8 1.8M5.3 17.7l1.8-1.8M14.9 8.1l1.8-1.8"/></g></symbol>
+
+    <!-- avatary: jídla s obličejem ve stylu nové Tečky -->
+    <g id="oci"><circle cx="-12" cy="0" r="4" fill="#2c2c2c"/><circle cx="12" cy="0" r="4" fill="#2c2c2c"/><path d="M-8 12c5 5 11 5 16 0" fill="none" stroke="#2c2c2c" stroke-width="3" stroke-linecap="round"/></g>
+    <symbol id="a-salat" viewBox="0 0 120 120"><path d="M28 50c4-14 14-20 22-14 6-10 18-10 22 0 8-6 20 0 22 14z" fill="#9fbf8f" stroke="#3d5233" stroke-width="2.5" stroke-linejoin="round"/><circle cx="46" cy="44" r="6" fill="#a24e33"/><circle cx="76" cy="42" r="5" fill="#e8913f"/><path d="M18 52h84c0 26-18 42-42 42S18 78 18 52z" fill="#fbfaf6" stroke="#3d5233" stroke-width="3"/><use href="#oci" transform="translate(60 68)"/></symbol>
+    <symbol id="a-kase" viewBox="0 0 120 120"><path d="M22 50c10-8 66-8 76 0" fill="#efe4cc" stroke="#3d5233" stroke-width="2.5"/><circle cx="50" cy="44" r="5" fill="#5a6fb0"/><circle cx="62" cy="42" r="5" fill="#a24e33"/><circle cx="72" cy="45" r="4" fill="#5a6fb0"/><path d="M18 52h84c0 26-18 42-42 42S18 78 18 52z" fill="#bfa97f" stroke="#3d5233" stroke-width="3"/><use href="#oci" transform="translate(60 68)"/></symbol>
+    <symbol id="a-smoothie" viewBox="0 0 120 120"><path d="M70 28l10-16" stroke="#a24e33" stroke-width="4" stroke-linecap="round"/><path d="M34 30h52l-6 72H40z" fill="#9fbf8f" stroke="#3d5233" stroke-width="3" stroke-linejoin="round"/><path d="M34 30h52" stroke="#3d5233" stroke-width="5" stroke-linecap="round"/><use href="#oci" transform="translate(60 60)"/></symbol>
+    <symbol id="a-avokado" viewBox="0 0 120 120"><path d="M60 14c18 0 30 30 30 56s-14 36-30 36-30-10-30-36 12-56 30-56z" fill="#5e7769" stroke="#3d5233" stroke-width="3"/><path d="M60 22c13 0 22 26 22 48s-10 28-22 28-22-6-22-28 9-48 22-48z" fill="#dfe9c4"/><circle cx="60" cy="80" r="11" fill="#8a6a4a"/><use href="#oci" transform="translate(60 52) scale(.8)"/></symbol>
+    <symbol id="a-rajce" viewBox="0 0 120 120"><circle cx="60" cy="66" r="38" fill="#a24e33" stroke="#3d5233" stroke-width="3"/><path d="M60 30l-6-8M60 30l8-8M60 30l-12 2M60 30l12 2" stroke="#5e7769" stroke-width="4" stroke-linecap="round"/><g transform="translate(60 66)"><circle cx="-12" cy="0" r="4" fill="#fff"/><circle cx="12" cy="0" r="4" fill="#fff"/><path d="M-8 12c5 5 11 5 16 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g></symbol>
+    <symbol id="a-mrkev" viewBox="0 0 120 120"><path d="M42 30c18-6 40 0 40 6L66 104c-2 6-10 6-12 0z" transform="rotate(14 60 60)" fill="#e8913f" stroke="#3d5233" stroke-width="3" stroke-linejoin="round"/><path d="M58 26l-8-14M62 26l4-16M66 28l12-10" stroke="#5e7769" stroke-width="4" stroke-linecap="round"/><use href="#oci" transform="translate(62 52) scale(.8)"/></symbol>
+  </defs>
+</svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- nová Tečka: tenká linka jako logo -->
+    <symbol id="t-nova" viewBox="0 0 200 200">
+      <ellipse cx="100" cy="186" rx="44" ry="6" fill="#3d5233" opacity=".08"/>
+      <circle cx="100" cy="112" r="64" fill="#f1e8d3" stroke="#3d5233" stroke-width="3"/>
+      <path d="M100 48c-1-8 1-15 4-21" fill="none" stroke="#3d5233" stroke-width="3" stroke-linecap="round"/>
+      <path d="M104 30c10-14 26-15 34-10-7 14-24 16-34 10z" fill="#5e7769" stroke="#3d5233" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M102 34c-9-10-21-10-28-5 6 11 19 12 28 5z" fill="#bfa97f" stroke="#3d5233" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="80" cy="108" r="4.5" fill="#2c2c2c"/><circle cx="120" cy="108" r="4.5" fill="#2c2c2c"/>
+      <path d="M90 126c6 6 14 6 20 0" fill="none" stroke="#2c2c2c" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="70" cy="122" r="6" fill="#e8a487" opacity=".35"/><circle cx="130" cy="122" r="6" fill="#e8a487" opacity=".35"/>
+    </symbol>
+    <symbol id="t-nova-radost" viewBox="0 0 200 200">
+      <ellipse cx="100" cy="186" rx="44" ry="6" fill="#3d5233" opacity=".08"/>
+      <circle cx="100" cy="112" r="64" fill="#f1e8d3" stroke="#3d5233" stroke-width="3"/>
+      <path d="M100 48c-1-8 1-15 4-21" fill="none" stroke="#3d5233" stroke-width="3" stroke-linecap="round"/>
+      <path d="M104 30c10-14 26-15 34-10-7 14-24 16-34 10z" fill="#5e7769" stroke="#3d5233" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M102 34c-9-10-21-10-28-5 6 11 19 12 28 5z" fill="#bfa97f" stroke="#3d5233" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M73 110c4-6 10-6 14 0M113 110c4-6 10-6 14 0" fill="none" stroke="#2c2c2c" stroke-width="3" stroke-linecap="round"/>
+      <path d="M86 124c8 11 20 11 28 0" fill="#a24e33" stroke="#2c2c2c" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle cx="70" cy="122" r="6" fill="#e8a487" opacity=".35"/><circle cx="130" cy="122" r="6" fill="#e8a487" opacity=".35"/>
+    </symbol>
+    <symbol id="t-nova-dort" viewBox="0 0 200 200">
+      <ellipse cx="100" cy="186" rx="60" ry="6" fill="#3d5233" opacity=".08"/>
+      <path d="M36 168h128V112L36 140z" fill="#f1e8d3" stroke="#3d5233" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M36 140 150 98c8-3 14 3 14 14" fill="#fbfaf6" stroke="#3d5233" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M36 154h128" stroke="#bfa97f" stroke-width="5"/>
+      <circle cx="146" cy="88" r="8" fill="#a24e33" stroke="#3d5233" stroke-width="2"/>
+      <path d="M146 80c0-6 2-10 5-13" fill="none" stroke="#3d5233" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M150 68c8-10 19-10 25-6-5 10-17 11-25 6z" fill="#5e7769" stroke="#3d5233" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="84" cy="150" r="4" fill="#2c2c2c"/><circle cx="114" cy="146" r="4" fill="#2c2c2c"/>
+      <path d="M92 162c5 4 11 4 16-1" fill="none" stroke="#2c2c2c" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<main class="wrap">
+  <p class="eyebrow">Fáze B · návrhy k výběru</p>
+  <h1>Vzhled Niky's Kitchen</h1>
+  <p class="lead">Čtyři rozhodnutí: pozadí, podoba Tečky, ikonky a animace. U každého je napsané, co mi stačí odpovědět. Všechno tady je jen náhled, na webu se zatím nic nezměnilo.</p>
+
+  <!-- 1) POZADÍ -->
+  <section class="block" aria-labelledby="pozadi">
+    <p class="eyebrow">1 · Pozadí</p>
+    <h2 id="pozadi">Místo krémové: tři varianty s jemným vzorem</h2>
+    <p>Vzor je tak slabý, aby nerušil čtení. Karty zůstávají bílé, takže texty a recepty pořád vyniknou.</p>
+    <div class="grid3">
+      <div class="option">
+        <div class="option-head"><span class="option-letter">A</span><h3>Bylinková šalvěj</h3></div>
+        <div class="mock bgA">
+          <div class="mock-bar"><img src="{{LOGO}}" alt=""><b>Niky's Kitchen</b><span>Recepty · Appka · Obchod</span></div>
+          <div class="mock-body">
+            <div class="mock-h">Jez s radostí, ne s výčitkami.</div>
+            <span class="mock-btn">Prohlédnout recepty</span>
+            <div class="mock-card"><img src="{{KOLAC}}" alt=""><div><b>Koláč od Niky</b><small>60 min · ~520 kcal</small></div></div>
+          </div>
+        </div>
+        <p>Světle šalvějová s lístky, vidličkou a snítkami v tenké lince jako logo. Nejvíc „zdravé a přírodní“.</p>
+      </div>
+      <div class="option">
+        <div class="option-head"><span class="option-letter">B</span><h3>Kostkovaný ubrus</h3></div>
+        <div class="mock bgB">
+          <div class="mock-bar"><img src="{{LOGO}}" alt=""><b>Niky's Kitchen</b><span>Recepty · Appka · Obchod</span></div>
+          <div class="mock-body">
+            <div class="mock-h">Jez s radostí, ne s výčitkami.</div>
+            <span class="mock-btn">Prohlédnout recepty</span>
+            <div class="mock-card"><img src="{{KOLAC}}" alt=""><div><b>Koláč od Niky</b><small>60 min · ~520 kcal</small></div></div>
+          </div>
+        </div>
+        <p>Teplá světlá terakota s jemným kostkovaným vzorem jako ubrus u babičky. Nejvíc „domácí“.</p>
+      </div>
+      <div class="option">
+        <div class="option-head"><span class="option-letter">C</span><h3>Kuchyňská tabule</h3></div>
+        <div class="mock bgC">
+          <div class="mock-bar"><img src="{{LOGO}}" alt=""><b>Niky's Kitchen</b><span>Recepty · Appka · Obchod</span></div>
+          <div class="mock-body">
+            <div class="mock-h">Jez s radostí, ne s výčitkami.</div>
+            <span class="mock-btn">Prohlédnout recepty</span>
+            <div class="mock-card"><img src="{{KOLAC}}" alt=""><div><b>Koláč od Niky</b><small>60 min · ~520 kcal</small></div></div>
+          </div>
+        </div>
+        <p>Tmavě šalvějová hlavička s drobnými zlatými tečkami (Tečka!), zbytek skoro bílý. Nejvíc „elegantní“, ladí s logem.</p>
+      </div>
+    </div>
+    <h3>Další tři pozadí</h3>
+    <div class="grid3">
+      <div class="option">
+        <div class="option-head"><span class="option-letter">D</span><h3>Zelená zahrada</h3></div>
+        <div class="mock bgD">
+          <div class="mock-bar"><img src="{{LOGO}}" alt=""><b>Niky's Kitchen</b><span>Recepty · Appka · Obchod</span></div>
+          <div class="mock-body"><div class="mock-h">Jez s radostí, ne s výčitkami.</div><span class="mock-btn">Prohlédnout recepty</span>
+            <div class="mock-card"><img src="{{KOLAC}}" alt=""><div><b>Koláč od Niky</b><small>60 min · ~520 kcal</small></div></div></div>
+        </div>
+        <p>Sytější šalvěj s velkými vybledlými lístky. Svěží a „zdravá“, výraznější než A.</p>
+      </div>
+      <div class="option">
+        <div class="option-head"><span class="option-letter">E</span><h3>Len</h3></div>
+        <div class="mock bgE">
+          <div class="mock-bar"><img src="{{LOGO}}" alt=""><b>Niky's Kitchen</b><span>Recepty · Appka · Obchod</span></div>
+          <div class="mock-body"><div class="mock-h">Jez s radostí, ne s výčitkami.</div><span class="mock-btn">Prohlédnout recepty</span>
+            <div class="mock-card"><img src="{{KOLAC}}" alt=""><div><b>Koláč od Niky</b><small>60 min · ~520 kcal</small></div></div></div>
+        </div>
+        <p>Teplá šedobéžová s jemnou texturou lněné utěrky. Klidná, domácí, bez kresby.</p>
+      </div>
+      <div class="option">
+        <div class="option-head"><span class="option-letter">F</span><h3>Bílá s barevnými skvrnami</h3></div>
+        <div class="mock bgF">
+          <div class="mock-bar"><img src="{{LOGO}}" alt=""><b>Niky's Kitchen</b><span>Recepty · Appka · Obchod</span></div>
+          <div class="mock-body"><div class="mock-h">Jez s radostí, ne s výčitkami.</div><span class="mock-btn">Prohlédnout recepty</span>
+            <div class="mock-card"><img src="{{KOLAC}}" alt=""><div><b>Koláč od Niky</b><small>60 min · ~520 kcal</small></div></div></div>
+        </div>
+        <p>Čistá bílá s velkými rozmazanými kruhy v barvách značky (med, šalvěj, terakota) jako akvarel. Moderní a vzdušná.</p>
+      </div>
+    </div>
+    <p class="ask">Odpověz: <strong>pozadí A–F</strong> (nebo kombinace, třeba „hlavička C a pozadí D“).</p>
+  </section>
+
+  <!-- 2) TEČKA -->
+  <section class="block" aria-labelledby="tecka">
+    <p class="eyebrow">2 · Maskot</p>
+    <h2 id="tecka">Tečka vedle loga: teď a nově</h2>
+    <div class="tecky">
+      <div class="tecka-panel">
+        <h3>Teď</h3>
+        <div class="tecka-row">
+          <img class="logo" src="{{LOGO}}" alt="Logo NK">
+          <img src="{{TECKA_AHOJ}}" alt="Současná Tečka mává">
+          <img src="{{TECKA_ZAKUSEK}}" alt="Současná Tečka jako zákusek">
+        </div>
+        <p>Silné obrysy, ruce a nohy, výrazné tváře. Roztomilá, ale vedle jemného loga působí dětsky.</p>
+      </div>
+      <div class="tecka-panel">
+        <h3>Nově</h3>
+        <div class="tecka-row">
+          <img class="logo" src="{{LOGO}}" alt="Logo NK">
+          <svg role="img" aria-label="Nová Tečka"><use href="#t-nova"/></svg>
+          <svg role="img" aria-label="Nová Tečka se raduje"><use href="#t-nova-radost"/></svg>
+          <svg role="img" aria-label="Nová Tečka jako dort"><use href="#t-nova-dort"/></svg>
+        </div>
+        <p>Tenká linka jako u loga, bez rukou a nohou, dva lístky v barvách loga (šalvěj a med). Pořád má obličej a mění se v jídlo, ale je decentní.</p>
+      </div>
+    </div>
+    <p class="ask">Odpověz: <strong>Tečka nová, nebo stará</strong>. Případně co upravit (třeba „nová, ale s rukama“).</p>
+  </section>
+
+  <!-- 3) IKONKY -->
+  <section class="block" aria-labelledby="ikonky">
+    <p class="eyebrow">3 · Ikonky</p>
+    <h2 id="ikonky">Vlastní ikonky místo emoji</h2>
+    <p>Stejná tenká linka jako logo a u každé malý lístek Tečky. Na webu i v appce budou všude stejné.</p>
+    <div class="icons">
+      <div class="icon"><svg><use href="#i-cas"/></svg><span>Čas</span></div>
+      <div class="icon"><svg><use href="#i-kcal"/></svg><span>Kcal</span></div>
+      <div class="icon"><svg><use href="#i-porce"/></svg><span>Porce</span></div>
+      <div class="icon"><svg><use href="#i-slane"/></svg><span>Slané</span></div>
+      <div class="icon"><svg><use href="#i-sladke"/></svg><span>Sladké</span></div>
+      <div class="icon"><svg><use href="#i-napoje"/></svg><span>Nápoje</span></div>
+      <div class="icon"><svg><use href="#i-alergen"/></svg><span>Alergen</span></div>
+      <div class="icon"><svg><use href="#i-vari"/></svg><span>Vaříme</span></div>
+      <div class="icon"><svg><use href="#i-profil"/></svg><span>Profil</span></div>
+      <div class="icon"><svg><use href="#i-den"/></svg><span>Můj den</span></div>
+      <div class="icon"><svg><use href="#i-lednicka"/></svg><span>Lednička</span></div>
+      <div class="icon"><svg><use href="#i-recepty"/></svg><span>Recepty</span></div>
+      <div class="icon"><svg><use href="#i-nakup"/></svg><span>Nákup</span></div>
+      <div class="icon"><svg><use href="#i-oblibene"/></svg><span>Uložit</span></div>
+      <div class="icon"><svg><use href="#i-snidane"/></svg><span>Snídaně</span></div>
+      <div class="icon"><svg><use href="#i-svacina"/></svg><span>Svačina</span></div>
+      <div class="icon"><svg><use href="#i-vecere"/></svg><span>Večeře</span></div>
+      <div class="icon"><svg><use href="#i-tyden"/></svg><span>Plán na týden</span></div>
+      <div class="icon"><svg><use href="#i-hledat"/></svg><span>Hledat</span></div>
+      <div class="icon"><svg><use href="#i-filtr"/></svg><span>Filtry</span></div>
+      <div class="icon"><svg><use href="#i-vege"/></svg><span>Vegetariánské</span></div>
+      <div class="icon"><svg><use href="#i-bezlepku"/></svg><span>Bez lepku</span></div>
+      <div class="icon"><svg><use href="#i-trouba"/></svg><span>Trouba</span></div>
+      <div class="icon"><svg><use href="#i-babicka"/></svg><span>Od babičky</span></div>
+      <div class="icon"><svg><use href="#i-stahnout"/></svg><span>Stáhnout PDF</span></div>
+      <div class="icon"><svg><use href="#i-kosik"/></svg><span>Košík</span></div>
+      <div class="icon"><svg><use href="#i-newsletter"/></svg><span>Newsletter</span></div>
+      <div class="icon"><svg><use href="#i-zvonek"/></svg><span>Upozornění</span></div>
+      <div class="icon"><svg><use href="#i-nastaveni"/></svg><span>Nastavení</span></div>
+    </div>
+    <div class="icon-compare">
+      <span>Teď: ⏱ 25 min · 🔥 ~480 kcal</span>
+      <span>Nově:</span>
+      <span class="chip"><svg><use href="#i-cas"/></svg>25 min</span>
+      <span class="chip"><svg><use href="#i-kcal"/></svg>~480 kcal</span>
+    </div>
+    <p class="ask">Odpověz: <strong>ikonky ano</strong>, nebo co změnit (třeba „bez lístků“).</p>
+  </section>
+
+  <!-- AVATARY -->
+  <section class="block" aria-labelledby="avatary">
+    <p class="eyebrow">3b · Avatary k profilu</p>
+    <h2 id="avatary">Vyber si, kdo budeš v appce</h2>
+    <p>Po přihlášení si každý zvolí avatara. Uvidí ho vpravo nahoře, takže bude hned vědět, že je přihlášený, a pod ním svoje kcal na dnešek.</p>
+    <div class="avatars">
+      <figure class="avatar"><svg><use href="#t-nova"/></svg><figcaption>Tečka</figcaption></figure>
+      <figure class="avatar"><svg><use href="#a-salat"/></svg><figcaption>Salát</figcaption></figure>
+      <figure class="avatar"><svg><use href="#a-kase"/></svg><figcaption>Kaše</figcaption></figure>
+      <figure class="avatar"><svg><use href="#a-smoothie"/></svg><figcaption>Smoothie</figcaption></figure>
+      <figure class="avatar"><svg><use href="#a-avokado"/></svg><figcaption>Avokádo</figcaption></figure>
+      <figure class="avatar"><svg><use href="#a-rajce"/></svg><figcaption>Rajče</figcaption></figure>
+      <figure class="avatar"><svg><use href="#a-mrkev"/></svg><figcaption>Mrkev</figcaption></figure>
+      <figure class="avatar"><svg><use href="#t-nova-dort"/></svg><figcaption>Dort</figcaption></figure>
+    </div>
+    <div class="profile-chip">
+      <svg><use href="#a-avokado"/></svg>
+      <div><b>Ahoj, Petro</b><small>Dnes: 1 240 z 1 850 kcal (67 %)</small></div>
+    </div>
+    <p class="ask">Odpověz: <strong>avatary ano</strong>, případně které jídlo přidat nebo vyměnit.</p>
+  </section>
+
+  <!-- 4) KARTY -->
+  <section class="block" aria-labelledby="karty">
+    <p class="eyebrow">4 · Karta receptu</p>
+    <h2 id="karty">Výraznější karta: hned vidíš, co je důležité</h2>
+    <div class="cards">
+      <div>
+        <p><strong>Teď</strong></p>
+        <div class="card-now">
+          <div class="media"><img src="{{TECKA_ZAKUSEK}}" alt=""></div>
+          <div class="body"><span class="chip">Sladké</span><b>Tvarohový dezert s jahodami</b><small>⏱ 10 min · 🔥 ~190 kcal</small></div>
+        </div>
+      </div>
+      <div>
+        <p><strong>Nově</strong> (fotka „připíchnutá v kuchařce“)</p>
+        <div class="card-new">
+          <div class="polaroid-wrap">
+            <figure class="polaroid"><span class="pin" aria-hidden="true"></span><img src="{{KOLAC}}" alt="Koláč od Niky"><figcaption>od Niky</figcaption></figure>
+          </div>
+          <div class="body">
+            <span class="cat">SLANÉ</span>
+            <h3>Koláč od Niky</h3>
+            <div class="facts-new">
+              <span class="fact"><svg><use href="#i-cas"/></svg>60 min</span>
+              <span class="fact"><svg><use href="#i-kcal"/></svg>~520 kcal</span>
+              <span class="fact warn"><svg><use href="#i-alergen"/></svg>mléko, vejce</span>
+            </div>
+            <div class="row"><small style="color:#6b6b6b">#oběd #večeře</small><span class="save"><svg><use href="#i-oblibene"/></svg>Uložit</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Barevný proužek a štítek podle kategorie (slané terakota, sladké med, nápoje šalvěj), čas, kcal a alergen jako štítky s ikonkami, tlačítko Uložit do vlastní kuchařky. Fotka bude tvoje, tady je zatím ilustrační.</p>
+    <p class="ask">Odpověz: <strong>karta ano</strong>, nebo co změnit (třeba „fotka bez připínáčku“).</p>
+  </section>
+
+  <!-- 5) ANIMACE -->
+  <section class="block" aria-labelledby="animace">
+    <p class="eyebrow">5 · Mikroanimace</p>
+    <h2 id="animace">Malé radosti při vaření a nákupu</h2>
+    <p>Hrají jen chvilku a jen když se něco stane. Kdo má v telefonu zapnuté „omezit pohyb“, uvidí rovnou konečný stav.</p>
+    <div class="anims">
+      <div class="anim" id="a1">
+        <h3>1 · Koláč jede do trouby</h3>
+        <svg viewBox="0 0 320 150" role="img" aria-label="Koláč jede po lince do trouby a dvířka se zavřou">
+          <rect x="0" y="118" width="320" height="32" fill="#efe4cc"/>
+          <path d="M0 118h320" stroke="#3d5233" stroke-width="2.5"/>
+          <rect x="206" y="28" width="96" height="90" rx="8" fill="#fbfaf6" stroke="#3d5233" stroke-width="2.5"/>
+          <rect x="214" y="36" width="80" height="12" rx="3" fill="none" stroke="#3d5233" stroke-width="2"/>
+          <circle cx="224" cy="42" r="2.5" fill="#3d5233"/><circle cx="236" cy="42" r="2.5" fill="#3d5233"/>
+          <rect class="glow" x="216" y="56" width="76" height="56" rx="4" fill="#f59e0b"/>
+          <g class="pie">
+            <path d="M28 116h52l-5-12H33z" fill="#bfa97f" stroke="#3d5233" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M33 104c4-9 38-9 42 0" fill="#e9c98a" stroke="#3d5233" stroke-width="2"/>
+            <circle cx="46" cy="101" r="2.4" fill="#5e7769"/><circle cx="58" cy="99" r="2.4" fill="#a24e33"/><circle cx="66" cy="102" r="2.4" fill="#5e7769"/>
+          </g>
+          <rect class="door" x="214" y="54" width="80" height="60" rx="4" fill="#5e7769" fill-opacity=".85" stroke="#3d5233" stroke-width="2"/>
+          <path class="door" d="M226 62h56" stroke="#fbfaf6" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <p>Po kliknutí na „Vaříme“ nebo při odpočtu času pečení.</p>
+        <button class="replay" type="button" data-target="a1">Přehrát</button>
+      </div>
+
+      <div class="anim" id="a2">
+        <h3>2 · Košík se plní nákupem</h3>
+        <svg viewBox="0 0 320 150" role="img" aria-label="Suroviny padají do nákupního košíku">
+          <!-- suroviny (za přední stěnou košíku, vykukují nahoře) -->
+          <g class="item i1"><path d="M126 92l18-30 6 4-16 30z" fill="#e8913f" stroke="#3d5233" stroke-width="1.6" stroke-linejoin="round"/><path d="M144 62l-2-8M146 63l6-6M147 64l9-1" stroke="#5e7769" stroke-width="2.2" stroke-linecap="round"/></g>
+          <g class="item i2"><path d="M154 88c-2-20 6-30 14-30s14 10 12 30z" fill="#fbfaf6" stroke="#3d5233" stroke-width="1.6"/><path d="M160 60h16v-6h-16z" fill="#5e7769" stroke="#3d5233" stroke-width="1.4"/><path d="M158 72h20" stroke="#a24e33" stroke-width="3"/></g>
+          <g class="item i3"><circle cx="198" cy="80" r="12" fill="#a24e33" stroke="#3d5233" stroke-width="1.6"/><path d="M198 68c0-4 2-6 4-7" stroke="#3d5233" stroke-width="1.6" fill="none"/><path d="M201 64c4-3 8-2 10 0-3 3-7 3-10 0z" fill="#5e7769"/></g>
+          <g class="item i4"><path d="M182 88c0-12 6-22 12-26 2 8 0 20-4 26z" fill="#9fbf8f" stroke="#3d5233" stroke-width="1.4"/><path d="M170 88c2-12 8-20 14-22 0 8-4 18-8 22z" fill="#5e7769" stroke="#3d5233" stroke-width="1.4"/></g>
+          <g class="item i5"><ellipse cx="141" cy="84" rx="13" ry="9" fill="#f1e8d3" stroke="#3d5233" stroke-width="1.6"/><path d="M131 82c6 3 14 3 20 0" stroke="#bfa97f" stroke-width="1.4" fill="none"/></g>
+          <g class="item i6"><path d="M212 90c0-10 4-18 10-20 6 2 10 10 10 20z" fill="#e9c98a" stroke="#3d5233" stroke-width="1.6"/><path d="M222 70v-5" stroke="#3d5233" stroke-width="2" stroke-linecap="round"/></g>
+          <!-- košík: drátěný s uchem, přední stěna kryje spodek surovin -->
+          <g class="basket">
+            <path d="M118 84c0-38 120-38 120 0" fill="none" stroke="#3d5233" stroke-width="3" stroke-linecap="round"/>
+            <path d="M108 86h140l-12 50H120z" fill="#efe6d2" stroke="#3d5233" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M104 84h148" stroke="#3d5233" stroke-width="5" stroke-linecap="round"/>
+            <g stroke="#bfa97f" stroke-width="2"><path d="M114 100h128M117 114h122M120 128h116"/><path d="M140 88l2 46M164 88l1 46M188 88l-1 46M212 88l-2 46"/></g>
+          </g>
+          <g class="bag-done"><circle cx="276" cy="56" r="15" fill="#3d5233"/><path d="M269 56l5 5 9-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+        </svg>
+        <p>Když přidáš recept nebo celý den na nákup: mrkev, mléko, jablko, bylinky, vejce a pečivo dopadnou do košíku.</p>
+        <button class="replay" type="button" data-target="a2">Přehrát</button>
+      </div>
+
+      <div class="anim" id="a3">
+        <h3>3 · Tečka se promění v dort</h3>
+        <svg viewBox="0 0 320 150" role="img" aria-label="Tečka se promění ve dort">
+          <g transform="translate(90 0) scale(.72)"><g class="morph-a"><use href="#t-nova-radost" width="200" height="200"/></g></g>
+          <g transform="translate(90 0) scale(.72)"><g class="morph-b"><use href="#t-nova-dort" width="200" height="200"/></g></g>
+          <g class="spark" fill="#bfa97f"><circle cx="110" cy="40" r="4"/><circle cx="214" cy="34" r="5"/><circle cx="226" cy="96" r="3.5"/><circle cx="98" cy="100" r="3"/></g>
+        </svg>
+        <p>Když do plánu přidáš sladkou tečku nebo splníš denní cíl.</p>
+        <button class="replay" type="button" data-target="a3">Přehrát</button>
+      </div>
+
+      <div class="anim" id="a4">
+        <h3>4 · Odškrtnutí na nákupu</h3>
+        <svg viewBox="0 0 320 150" role="img" aria-label="Položky nákupního seznamu se odškrtnou a přeškrtnou">
+          <g font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#2c2c2c">
+            <g class="c1"><rect x="40" y="22" width="22" height="22" rx="6" fill="#fff" stroke="#3d5233" stroke-width="2"/><path class="check-path" d="M45 33l5 5 8-10" fill="none" stroke="#3d5233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="74" y="38">ovesné vločky 50 g</text><path class="strike" d="M72 33h150" stroke="#a24e33" stroke-width="2"/></g>
+            <g class="c2"><rect x="40" y="62" width="22" height="22" rx="6" fill="#fff" stroke="#3d5233" stroke-width="2"/><path class="check-path" d="M45 73l5 5 8-10" fill="none" stroke="#3d5233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="74" y="78">jablko 1 ks</text><path class="strike" d="M72 73h90" stroke="#a24e33" stroke-width="2"/></g>
+            <g class="c3"><rect x="40" y="102" width="22" height="22" rx="6" fill="#fff" stroke="#3d5233" stroke-width="2"/><path class="check-path" d="M45 113l5 5 8-10" fill="none" stroke="#3d5233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="74" y="118">mléko 250 ml</text><path class="strike" d="M72 113h100" stroke="#a24e33" stroke-width="2"/></g>
+          </g>
+        </svg>
+        <p>Fajfka se nakreslí a položka se jemně přeškrtne.</p>
+        <button class="replay" type="button" data-target="a4">Přehrát</button>
+      </div>
+    </div>
+    <p class="ask">Odpověz: <strong>které animace chceš</strong> (třeba „1, 2 a 4“).</p>
+  </section>
+
+  <section class="block">
+    <div class="choose">
+      <h2>Jak mi odpovědět</h2>
+      <p>Stačí jedna zpráva, třeba: <code>pozadí D, Tečka nová, ikonky ano, avatary ano, karta ano, animace 1 2 3 4</code></p>
+      <p>Podle toho sjednotím vzhled celého webu i appky. Když se ti nebude líbit nic, napiš, co se ti nelíbí, a připravím další kolo.</p>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Přehrání animace: vypne a znovu zapne třídu .play
+  document.querySelectorAll(".replay").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var box = document.getElementById(btn.dataset.target);
+      box.classList.remove("play");
+      void box.offsetWidth;
+      box.classList.add("play");
+    });
+  });
+  // Animace se jednou přehrají samy po načtení
+  ["a1", "a2", "a3", "a4"].forEach(function (id, i) {
+    setTimeout(function () { document.getElementById(id).classList.add("play"); }, 400 + i * 300);
+  });
+</script>
