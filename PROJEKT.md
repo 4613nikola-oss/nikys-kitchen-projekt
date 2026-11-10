@@ -1,7 +1,7 @@
 # Niky's Kitchen – kniha projektu
 
 Sem se zapisuje jen to, na čem jsme se v chatu **shodly**. Nápady, o kterých ještě nevíme, patří do části 💡 Nápady.
-Poslední aktualizace: 2026-11-07
+Poslední aktualizace: 2026-11-10
 
 ---
 
@@ -101,6 +101,10 @@ ikys-krabicky.myshopify.com`, zdarma bez limitu. Ukázková data od Shopify smaz
 * **2026-11-07** – **Všechny repozitáře jsou veřejné** (rozhodla Niky): nový web, appka, starý web i podklady. Hesla a soukromé soubory hlídá pojistka `.gitignore`
 * **2026-11-07** – **Shopify vývojářský obchod jde do portfolia** (zdarma, bez placených aplikací). Učení „jednou Claude, podruhé Niky“: Claude udělá jednu věc, Niky tu další sama v administraci, Claude zkontroluje
 * **2026-11-07** – **Persony mají přesný věk** (Petra 35, Tomáš 27, Jana 38, Kája 21, Martin 54, Pavel 41, Emma 31) a profilové fotky (Niky je doplňuje v Miru)
+* **2026-11-10** – **Obchod bez štítku „Připravujeme“.** Místo „Koupit“ je u produktů formulář „Mám zájem“ (e-mail), protože produkty zatím nejsou napsané a není platební brána. Prodávat se bude až s hotovými produkty, platbou a živnostenským listem
+* **2026-11-10** – **Dva kurzy:** online Kurz vaření dopředu (690 Kč, zaváděcí) a **Kurz vaření naživo** (1 290 Kč za osobu, 3 hodiny, max. 8 lidí). Oba mají místo obálky ilustraci (lektorka online / skupina vaří s lektorkou). Startovací knížka je jen v boxu s newsletterem, ne dvakrát
+* **2026-11-10** – **Newsletter a „Mám zájem“ přes Make → Google tabulka** (zdarma). E-maily se ukládají do tabulky v Google účtu Niky (ne RDCUK). Rozesílat zatím z Gmailu, později třeba MailerLite
+* **2026-11-10** – **Recepty se zobrazují na 1 porci**, aby to sedělo s „kcal na porci“. Tlačítky +/− se přepočítají
 * **2026-10-03** – Design musí být **responzivní** (mobil, tablet, počítač)
 * **2026-10-03** – Web má být **co nejpřívětivější pro co nejvíc lidí, nikoho nevynechat** (jazyk, zrak, věk, zdraví, peníze, čas, technika)
 * **2026-10-03** – Vizuální podklady a brainstorming žijí v Miru a ve složce `podklady/`; průběžně se aktualizují podle dohod
@@ -125,7 +129,11 @@ Seřazené podle doporučeného pořadí.
 * [x] SEO základ: mapa webu, data receptů pro Google (čas, kcal, suroviny), propojení CZ/EN, náhledy při sdílení (2026-11-09)
 * [x] Stránky: prohlášení o přístupnosti, ochrana soukromí, odkazy v patičce (2026-11-09)
 * [x] Recept jde vytisknout nebo uložit jako PDF (2026-11-09)
-* [ ] Doplnit kontakt na ochranu soukromí a přístupnost (e-mail značky) – nejpozději před newsletterem a obchodem
+* [ ] Doplnit kontakt na ochranu soukromí a přístupnost (e-mail značky) – newsletter už běží, takže co nejdřív
+* [ ] **Niky:** v Make potvrdit připojení svého Google účtu (odkaz v chatu 10. 11.) → Claude dokončí zápis do tabulky
+* [ ] **Niky:** v nastavení Hugging Face povolit generování obrázků → Claude vytvoří fotky ke 16 receptům
+* [ ] Fáze B – nový vzhled: Niky vybere pozadí A–F, pak se přenese na web i do appky (nová Tečka, ikonky, avatary, karta, animace 3 a 4)
+* [ ] Napsat Startovací knížku (dárek za newsletter) – Claude ji může poskládat z receptů v databázi do PDF
 * [ ] Až bude web online s novými stránkami: přidat ho do Google Search Console a odeslat mapu webu (sitemap.xml)
 * [ ] Před spuštěním newsletteru nebo obchodu nechat ochranu soukromí zkontrolovat (nejde o právní radu)
 * [x] **Databáze:** recepty a články jsou v jedné databázi, web i appka si je berou odtud; připravené tabulky pro newsletter a obchod (2026-11-07)
@@ -159,7 +167,7 @@ Seřazené podle doporučeného pořadí.
 5. [ ] **Appka do webu:** vložit Jídlo od A–Z jako sekci webu
 6. [ ] **Recepty s kcal:** u každého receptu kcal na porci → přenést do appky místo ukázkových
 7. [x] **Web online:** hotovo – online je nový web (2026-11-07)
-8. [ ] **Newsletter a sociální sítě:** napojit, nebo zatím skrýt
+8. [x] **Newsletter:** formulář na webu v obchodě, ukládá do Google tabulky přes Make (2026-11-10). Sociální sítě zatím ne
 9. [ ] **Anglická verze celého webu a appky** (texty připravovat na překlad už od teď)
 
 **Hotovo:**
