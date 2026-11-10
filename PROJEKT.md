@@ -133,7 +133,7 @@ Seřazené podle doporučeného pořadí.
 * [ ] **Niky:** v Make potvrdit připojení svého Google účtu (odkaz v chatu 10. 11.) → Claude dokončí zápis do tabulky
 * [ ] **Niky:** v nastavení Hugging Face povolit generování obrázků → Claude vytvoří fotky ke 16 receptům
 * [ ] Fáze B – nový vzhled: Niky vybere pozadí A–F, pak se přenese na web i do appky (nová Tečka, ikonky, avatary, karta, animace 3 a 4)
-* [ ] Napsat Startovací knížku (dárek za newsletter) – Claude ji může poskládat z receptů v databázi do PDF
+* [x] Startovací knížka (dárek za newsletter): 12 stran A5, česky i anglicky, 7 receptů do 15 minut, talíř, nákupní seznam, tipy od Tečky, místo na poznámky. Stáhne se hned po přihlášení k newsletteru (2026-11-10)
 * [ ] Až bude web online s novými stránkami: přidat ho do Google Search Console a odeslat mapu webu (sitemap.xml)
 * [ ] Před spuštěním newsletteru nebo obchodu nechat ochranu soukromí zkontrolovat (nejde o právní radu)
 * [x] **Databáze:** recepty a články jsou v jedné databázi, web i appka si je berou odtud; připravené tabulky pro newsletter a obchod (2026-11-07)
