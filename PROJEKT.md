@@ -130,7 +130,7 @@ Seřazené podle doporučeného pořadí.
 * [x] Stránky: prohlášení o přístupnosti, ochrana soukromí, odkazy v patičce (2026-11-09)
 * [x] Recept jde vytisknout nebo uložit jako PDF (2026-11-09)
 * [ ] Doplnit kontakt na ochranu soukromí a přístupnost (e-mail značky) – newsletter už běží, takže co nejdřív
-* [ ] **Niky:** v Make potvrdit připojení svého Google účtu (odkaz v chatu 10. 11.) → Claude dokončí zápis do tabulky
+* [x] Newsletter a „Mám zájem“ zapisují do Google tabulky **„Niky's Kitchen – newsletter a zájem“** (list Přihlášky) v Disku 4613nikola@gmail.com; scénář v Make „Niky's Kitchen – newsletter a Mám zájem“ (2026-11-10)
 * [ ] **Niky:** v nastavení Hugging Face povolit generování obrázků → Claude vytvoří fotky ke 16 receptům
 * [ ] Fáze B – nový vzhled: Niky vybere pozadí A–F, pak se přenese na web i do appky (nová Tečka, ikonky, avatary, karta, animace 3 a 4)
 * [x] Startovací knížka (dárek za newsletter): 12 stran A5, česky i anglicky, 7 receptů do 15 minut, talíř, nákupní seznam, tipy od Tečky, místo na poznámky. Stáhne se hned po přihlášení k newsletteru (2026-11-10)
