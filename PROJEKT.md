@@ -105,6 +105,7 @@ ikys-krabicky.myshopify.com`, zdarma bez limitu. Ukázková data od Shopify smaz
 * **2026-11-10** – **Dva kurzy:** online Kurz vaření dopředu (690 Kč, zaváděcí) a **Kurz vaření naživo** (1 290 Kč za osobu, 3 hodiny, max. 8 lidí). Oba mají místo obálky ilustraci (lektorka online / skupina vaří s lektorkou). Startovací knížka je jen v boxu s newsletterem, ne dvakrát
 * **2026-11-10** – **Newsletter a „Mám zájem“ přes Make → Google tabulka** (zdarma). E-maily se ukládají do tabulky v Google účtu Niky (ne RDCUK). Rozesílat zatím z Gmailu, později třeba MailerLite
 * **2026-11-10** – **Recepty se zobrazují na 1 porci**, aby to sedělo s „kcal na porci“. Tlačítky +/− se přepočítají
+* **2026-11-16** – **Styl „babiččina kuchařka“:** obsah webu i appky leží na papírovém listu (bylinkový vzor jen po stranách jako ubrus), pod nadpisy tah perem, tipy a poznámky ručně psaným písmem (Caveat) na lístečku se špendlíkem. Fotky jako polaroidy připíchnuté v kuchařce (Niky se líbí). Tečka je jemně animovaná (pohupuje se, mrká, lístky se vlní)
 * **2026-10-03** – Design musí být **responzivní** (mobil, tablet, počítač)
 * **2026-10-03** – Web má být **co nejpřívětivější pro co nejvíc lidí, nikoho nevynechat** (jazyk, zrak, věk, zdraví, peníze, čas, technika)
 * **2026-10-03** – Vizuální podklady a brainstorming žijí v Miru a ve složce `podklady/`; průběžně se aktualizují podle dohod
