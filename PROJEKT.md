@@ -1,7 +1,7 @@
 # Niky's Kitchen – kniha projektu
 
 Sem se zapisuje jen to, na čem jsme se v chatu **shodly**. Nápady, o kterých ještě nevíme, patří do části 💡 Nápady.
-Poslední aktualizace: 2026-11-10
+Poslední aktualizace: 2026-11-16
 
 ---
 
@@ -131,8 +131,10 @@ Seřazené podle doporučeného pořadí.
 * [x] Recept jde vytisknout nebo uložit jako PDF (2026-11-09)
 * [ ] Doplnit kontakt na ochranu soukromí a přístupnost (e-mail značky) – newsletter už běží, takže co nejdřív
 * [x] Newsletter a „Mám zájem“ zapisují do Google tabulky **„Niky's Kitchen – newsletter a zájem“** (list Přihlášky) v Disku 4613nikola@gmail.com; scénář v Make „Niky's Kitchen – newsletter a Mám zájem“ (2026-11-10)
-* [ ] **Niky:** v nastavení Hugging Face povolit generování obrázků → Claude vytvoří fotky ke 16 receptům
-* [ ] Fáze B – nový vzhled: Niky vybere pozadí A–F, pak se přenese na web i do appky (nová Tečka, ikonky, avatary, karta, animace 3 a 4)
+* [x] Fotky ke všem receptům: ilustrační fotky s volnou licencí (Openverse/Flickr), autor a licence pod fotkou. Časem nahradit vlastními (2026-11-12)
+* [x] **Fáze B – nový vzhled** na webu i v appce: pozadí A (bylinková šalvěj), nová Tečka v tenké lince (14 podob, původní v `assets/maskot/puvodni`), 29 vlastních ikonek, karta receptu jako polaroid s barvou kategorie, avatary v profilu appky, animace 3 (Tečka → dort) a 4 (odškrtnutí) (2026-11-12)
+* [x] Case study v hlavním README podkladů + GIFy animací v README webu a appky (2026-11-16)
+* [ ] Obálky produktů a merch v Shopify překreslit do nové Tečky
 * [x] Startovací knížka (dárek za newsletter): 12 stran A5, česky i anglicky, 7 receptů do 15 minut, talíř, nákupní seznam, tipy od Tečky, místo na poznámky. Stáhne se hned po přihlášení k newsletteru (2026-11-10)
 * [ ] Až bude web online s novými stránkami: přidat ho do Google Search Console a odeslat mapu webu (sitemap.xml)
 * [ ] Před spuštěním newsletteru nebo obchodu nechat ochranu soukromí zkontrolovat (nejde o právní radu)
@@ -149,7 +151,9 @@ Seřazené podle doporučeného pořadí.
 * [x] Smazat 17 ukázkových produktů od Shopify, opravit překlep „obět“ → „oběd“ (2026-11-07)
 * [ ] Přejmenovat obchod (doporučení: **Niky's Kitchen**), měna CZK, země Česko, časové pásmo Praha – Niky v Nastavení
 * [x] Digitální produkty (6) a merch (6) s obrázky, ceny krabiček, digitální bez dopravy (2026-11-08)
-* [ ] Obědy úterý až pátek (Niky sama podle pondělního vzoru)
+* [ ] Obědy úterý až pátek (Niky sama podle pondělního vzoru). Claudovy omylem založené obědy jsou archivované – po svých je smazat
+* [x] Kurz vaření naživo, nová ilustrace online kurzu, chytré kolekce Digitální produkty / Kurzy vaření / Merch s Tečkou, slevový kód VITEJ10 (1× na zákazníka), testovací objednávka #1001 (2026-11-12)
+* [ ] Vyřídit objednávku #1001 (Niky) – lekce v Notionu „Shopify pro Niky's Kitchen“ a modul 17 v akademii
 * [ ] Kolekce, slevový kód VITEJ10, testovací objednávka a její vyřízení
 * [ ] Téma obchodu na GitHub (repozitář `nikys-kitchen-shopify`)
 * [ ] Case study do portfolia (web, appka, databáze, Shopify)
