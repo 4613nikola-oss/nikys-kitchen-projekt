@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Komiks + noviny – návrh vzhledu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&family=Bangers&family=Caveat:wght@600&display=swap">
+<style>
+/* Návrh: vintage noviny + pop-art komiks v barvách Niky's Kitchen */
+:root { --ink: #1f1d1a; --papir: #f3ecdc; --zelena: #3d5233; --salvej: #5e7769; --med: #e9b949; --terra: #a24e33; --ruzova: #e9a6a0; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #d9cfb8; font-family: "Plus Jakarta Sans", sans-serif; color: var(--ink); }
+.strana { max-width: 1100px; margin: 24px auto; background: var(--papir); padding: 28px 34px 40px; box-shadow: 0 20px 50px rgba(0,0,0,.25);
+  background-image: radial-gradient(rgba(120,100,60,.08) 1px, transparent 1.2px); background-size: 6px 6px; }
+/* hlavička novin */
+.hlavicka { text-align: center; border-bottom: 6px double var(--ink); padding-bottom: 10px; }
+.radek { display: flex; justify-content: space-between; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); padding: 5px 0; margin: 8px 0; }
+.nazev { font-family: "Playfair Display", serif; font-weight: 900; font-size: 92px; line-height: .95; margin: 6px 0 2px; letter-spacing: -1px; }
+.podnazev { font-family: "Playfair Display", serif; font-style: italic; font-size: 20px; }
+.menu { display: flex; justify-content: center; gap: 28px; font-weight: 800; text-transform: uppercase; font-size: 14px; letter-spacing: .08em; padding-top: 8px; }
+.menu span:first-child { color: var(--terra); }
+/* titulní zpráva */
+.titulni { display: grid; grid-template-columns: 1.35fr 1fr; gap: 26px; margin-top: 22px; }
+.senzace { font-family: "Playfair Display", serif; font-weight: 900; font-size: 50px; line-height: 1.02; margin: 0 0 10px; text-transform: uppercase; }
+.senzace em { color: var(--terra); font-style: normal; }
+.perex { font-size: 17px; line-height: 1.55; column-count: 2; column-gap: 22px; column-rule: 1px solid #b9ad93; }
+.perex p { margin: 0 0 10px; }
+.perex p:first-child::first-letter { font-family: "Playfair Display", serif; font-weight: 900; font-size: 54px; float: left; line-height: .8; padding: 6px 6px 0 0; color: var(--zelena); }
+.tlacitka { display: flex; gap: 12px; margin-top: 14px; }
+.btn { font-weight: 800; padding: 12px 20px; border: 3px solid var(--ink); border-radius: 999px; box-shadow: 4px 4px 0 var(--ink); background: var(--zelena); color: #fff; }
+.btn.b2 { background: var(--med); color: var(--ink); }
+/* komiksový panel */
+.panel { position: relative; border: 4px solid var(--ink); background: var(--med); overflow: hidden; box-shadow: 6px 6px 0 var(--ink); }
+.panel.raster { background-image: radial-gradient(rgba(162,78,51,.45) 22%, transparent 24%); background-size: 12px 12px; }
+.panel.raster-z { background-color: #cfe0c6; background-image: radial-gradient(rgba(61,82,51,.35) 22%, transparent 24%); background-size: 12px 12px; }
+.panel.raster-r { background-color: #f6d3cc; background-image: radial-gradient(rgba(162,78,51,.35) 22%, transparent 24%); background-size: 12px 12px; }
+.bublina { position: absolute; background: #fff; border: 3px solid var(--ink); border-radius: 50% / 45%; padding: 14px 18px; font-family: "Bangers", "Playfair Display", sans-serif; font-size: 22px; letter-spacing: .5px; line-height: 1.1; text-align: center; text-transform: uppercase; }
+.bublina::after { content: ""; position: absolute; width: 22px; height: 22px; background: #fff; border-right: 3px solid var(--ink); border-bottom: 3px solid var(--ink); transform: rotate(45deg); }
+.ocasek-dole::after { bottom: -13px; left: 40%; }
+.ocasek-vlevo::after { left: -13px; top: 45%; transform: rotate(135deg); }
+.stitek { position: absolute; background: var(--ink); color: var(--med); font-family: "Bangers", sans-serif; font-size: 18px; padding: 4px 10px; letter-spacing: 1px; }
+/* sekce */
+h2.rubrika { font-family: "Playfair Display", serif; font-weight: 900; font-size: 28px; text-transform: uppercase; border-top: 4px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 6px 0; margin: 34px 0 16px; display: flex; justify-content: space-between; align-items: baseline; }
+h2.rubrika small { font-family: "Plus Jakarta Sans"; font-size: 13px; letter-spacing: .1em; }
+.pruh { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.pruh .panel { height: 280px; }
+.maskoti { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.maskot { background: #fffaf0; border: 2px solid var(--ink); padding: 14px; text-align: center; }
+.maskot h3 { font-family: "Playfair Display"; margin: 6px 0 2px; }
+.maskot p { margin: 0; font-size: 14px; }
+.maskot.doporuceni { box-shadow: 6px 6px 0 var(--terra); border-color: var(--terra); }
+.odznak { display: inline-block; background: var(--terra); color: #fff; font-weight: 800; font-size: 12px; padding: 2px 8px; margin-bottom: 4px; }
+.recept { display: grid; grid-template-columns: 1fr 1.6fr; gap: 22px; }
+.foto { border: 3px solid var(--ink); background: #fff; padding: 8px 8px 30px; transform: rotate(-2deg); box-shadow: 6px 6px 0 rgba(0,0,0,.2); position: relative; }
+.foto img { width: 100%; display: block; }
+.foto span { position: absolute; bottom: 4px; left: 0; right: 0; text-align: center; font-family: Caveat; font-size: 22px; }
+.listek { position: absolute; top: -18px; right: -14px; background: #f7e27a; padding: 8px 12px; font-family: Caveat; font-size: 20px; transform: rotate(6deg); box-shadow: 2px 3px 6px rgba(0,0,0,.25); }
+.sloupce { column-count: 2; column-gap: 22px; column-rule: 1px solid #b9ad93; font-size: 15px; line-height: 1.5; }
+.sloupce h4 { font-family: "Playfair Display"; margin: 0 0 6px; font-size: 18px; break-after: avoid; }
+.sloupce ul, .sloupce ol { margin: 0 0 12px; padding-left: 18px; }
+.inzerat { border: 3px double var(--ink); padding: 10px; text-align: center; margin-top: 10px; break-inside: avoid; }
+.inzerat b { font-family: "Playfair Display"; font-size: 20px; display: block; }
+.poznamka { margin-top: 26px; font-size: 13px; color: #5b5145; border-top: 1px solid #b9ad93; padding-top: 8px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <pattern id="raster" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.6" fill="#c69a4c" opacity=".55"/></pattern>
+    <!-- Tečka v komiksovém stylu: silná linka, ruce, rastr ve stínu, velké oči s odleskem -->
+    <symbol id="tecka-komiks" viewBox="0 0 220 220">
+      <ellipse cx="110" cy="206" rx="54" ry="8" fill="#1f1d1a" opacity=".15"/>
+      <path d="M40 120c-22-6-30 10-22 22" fill="none" stroke="#1f1d1a" stroke-width="7" stroke-linecap="round"/>
+      <path d="M180 112c18-18 30-10 30 2" fill="none" stroke="#1f1d1a" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="110" cy="124" r="72" fill="#f4e2b6" stroke="#1f1d1a" stroke-width="6"/>
+      <path d="M150 74a72 72 0 0 1 -6 116a72 72 0 0 1 -60 0" fill="url(#raster)"/>
+      <path d="M110 52c-1-10 1-18 5-25" fill="none" stroke="#1f1d1a" stroke-width="5" stroke-linecap="round"/>
+      <path d="M115 30c12-16 30-17 40-11-8 16-28 18-40 11z" fill="#5e7769" stroke="#1f1d1a" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M112 35c-10-12-24-12-32-6 7 13 22 14 32 6z" fill="#e9b949" stroke="#1f1d1a" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M74 98l18-6M146 98l-18-6" stroke="#1f1d1a" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="86" cy="118" rx="11" ry="14" fill="#fff" stroke="#1f1d1a" stroke-width="4"/><circle cx="89" cy="121" r="6" fill="#1f1d1a"/><circle cx="91" cy="118" r="2" fill="#fff"/>
+      <ellipse cx="134" cy="118" rx="11" ry="14" fill="#fff" stroke="#1f1d1a" stroke-width="4"/><circle cx="131" cy="121" r="6" fill="#1f1d1a"/><circle cx="133" cy="118" r="2" fill="#fff"/>
+      <path d="M90 150c10 14 30 14 40 0z" fill="#a24e33" stroke="#1f1d1a" stroke-width="4" stroke-linejoin="round"/>
+      <circle cx="68" cy="142" r="8" fill="#e9a6a0" opacity=".8"/><circle cx="152" cy="142" r="8" fill="#e9a6a0" opacity=".8"/>
+    </symbol>
+    <!-- Vařečka: nová postava, dřevěná vařečka s povahou šéfkuchaře -->
+    <symbol id="varecka" viewBox="0 0 220 220">
+      <ellipse cx="110" cy="210" rx="40" ry="6" fill="#1f1d1a" opacity=".15"/>
+      <rect x="98" y="104" width="24" height="104" rx="12" fill="#d9a86c" stroke="#1f1d1a" stroke-width="6"/>
+      <path d="M104 130v60M114 124v70" stroke="#a67a45" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M100 140c-20 4-34-4-38-16" fill="none" stroke="#1f1d1a" stroke-width="7" stroke-linecap="round"/>
+      <path d="M120 140c20 2 30 12 34 26" fill="none" stroke="#1f1d1a" stroke-width="7" stroke-linecap="round"/>
+      <ellipse cx="110" cy="70" rx="52" ry="62" fill="#e6b97c" stroke="#1f1d1a" stroke-width="6"/>
+      <path d="M140 30a52 62 0 0 1 8 80" fill="none" stroke="#c4935a" stroke-width="10" stroke-linecap="round" opacity=".6"/>
+      <path d="M66 22c-6-22 22-30 30-18 8-16 36-12 34 6 18-4 26 18 10 26H72c-10-2-12-10-6-14z" fill="#fff" stroke="#1f1d1a" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M78 52l16 6M142 52l-16 6" stroke="#1f1d1a" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="92" cy="70" r="6" fill="#1f1d1a"/><circle cx="128" cy="70" r="6" fill="#1f1d1a"/>
+      <path d="M94 96c10 6 22 6 32-2" fill="none" stroke="#1f1d1a" stroke-width="5" stroke-linecap="round"/>
+      <path d="M104 88c4-4 10-4 14 0" fill="none" stroke="#1f1d1a" stroke-width="4" stroke-linecap="round"/>
+    </symbol>
+    <!-- dnešní Tečka (tenká linka) pro srovnání -->
+    <symbol id="tecka-dnes" viewBox="0 0 200 200">
+      <circle cx="100" cy="112" r="64" fill="#f1e8d3" stroke="#3d5233" stroke-width="3"/>
+      <path d="M100 48c-1-8 1-15 4-21" fill="none" stroke="#3d5233" stroke-width="3" stroke-linecap="round"/>
+      <path d="M104 30c10-14 26-15 34-10-7 14-24 16-34 10z" fill="#5e7769" stroke="#3d5233" stroke-width="2"/>
+      <path d="M102 34c-9-10-21-10-28-5 6 11 19 12 28 5z" fill="#bfa97f" stroke="#3d5233" stroke-width="2"/>
+      <circle cx="80" cy="108" r="4.5" fill="#2c2c2c"/><circle cx="120" cy="108" r="4.5" fill="#2c2c2c"/>
+      <path d="M90 126c6 6 14 6 20 0" fill="none" stroke="#2c2c2c" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<main class="strana">
+  <header class="hlavicka">
+    <div class="radek"><span>Ročník I · Číslo 17</span><span>Praha, úterý 17. listopadu</span><span>Cena: zdarma</span></div>
+    <h1 class="nazev">NIKY'S KITCHEN</h1>
+    <p class="podnazev">Zpravodaj zdravé kuchyně bez výčitek</p>
+    <nav class="menu"><span>Domů</span><span>Recepty</span><span>Články</span><span>Aplikace</span><span>Obchod</span><span>O mně</span></nav>
+  </header>
+
+  <section class="titulni">
+    <div>
+      <h2 class="senzace">ŠOK! Žena uvařila <em>jednou</em> a jedla tři dny!</h2>
+      <div class="perex">
+        <p>Spočítáme, kolik potřebuješ. Uvaříš jeden základ a každý den ho jinak dochutíš. Sousedé nevěří vlastním očím.</p>
+        <p>„A sladká tečka je součást plánu,“ potvrdila naší redakci Tečka. Víc v rubrice Recepty.</p>
+      </div>
+      <div class="tlacitka"><span class="btn">Prohlédnout recepty</span><span class="btn b2">Spočítej si příjem</span></div>
+    </div>
+    <div class="panel raster" style="height:300px">
+      <span class="stitek" style="left:12px;top:12px">EXKLUZIVNĚ</span>
+      <div class="bublina ocasek-dole" style="right:14px;top:18px;width:210px">Lednička nehlídá. Já jo!</div>
+      <svg style="position:absolute;left:30px;bottom:-6px;width:230px;height:230px"><use href="#tecka-komiks"/></svg>
+    </div>
+  </section>
+
+  <h2 class="rubrika">Komiks dne <small>vtipné hlášky místo kázání</small></h2>
+  <div class="pruh">
+    <div class="panel raster-r">
+      <div class="bublina ocasek-dole" style="left:14px;top:14px;width:250px">Od zítřka jen voda a salát!</div>
+      <svg style="position:absolute;left:70px;bottom:-4px;width:170px;height:170px"><use href="#tecka-komiks"/></svg>
+    </div>
+    <div class="panel raster">
+      <div class="bublina ocasek-dole" style="left:16px;top:14px;width:250px">Sladká tečka se počítá. Do plánu!</div>
+      <svg style="position:absolute;left:70px;bottom:-4px;width:170px;height:170px"><use href="#varecka"/></svg>
+    </div>
+    <div class="panel raster-z">
+      <div class="bublina ocasek-dole" style="left:14px;top:14px;width:250px">Uvaříš jednou, sníš třikrát. Já si dám šlofíka.</div>
+      <svg style="position:absolute;left:70px;bottom:-4px;width:170px;height:170px"><use href="#varecka"/></svg>
+    </div>
+  </div>
+
+  <h2 class="rubrika">Maskot: vyber si <small>3 varianty</small></h2>
+  <div class="maskoti">
+    <div class="maskot"><svg width="170" height="170"><use href="#tecka-dnes"/></svg><h3>A · Tečka dnes</h3><p>Tenká linka jako logo. Klidná, ale v komiksu zanikne.</p></div>
+    <div class="maskot doporuceni"><span class="odznak">DOPORUČUJU</span><br><svg width="170" height="170"><use href="#tecka-komiks"/></svg><h3>B · Tečka komiks</h3><p>Silná linka, ruce, rastr, velké oči. Pořád je to Tečka, kterou lidi znají z merche.</p></div>
+    <div class="maskot"><svg width="170" height="170"><use href="#varecka"/></svg><h3>C · Vařečka</h3><p>Nová postava, drzý šéfkuchař. Hodí se jako parťák Tečky v komiksech.</p></div>
+  </div>
+
+  <h2 class="rubrika">Recept týdne <small>rubrika Slané</small></h2>
+  <div class="recept">
+    <div class="foto"><div class="listek">vydrží 3 dny!</div><img src="../../niky-web/public/images/recepty/kolac-hotovy.webp" alt=""><span>Koláč od Niky</span></div>
+    <div class="sloupce">
+      <h4>Koláč od Niky · 60 min · ~520 kcal</h4>
+      <ul><li>brambory, cuketa</li><li>kuřecí mleté maso</li><li>mozzarella, špenát, česnek</li><li>vejce, piniové oříšky</li></ul>
+      <ol><li>Troubu předehřej na 180 °C.</li><li>Brambory nakrájej na plátky a vyskládej do formy.</li><li>Přidej maso, cuketu a špenát, zalij vejci.</li><li>Peč 45 minut dozlatova.</li></ol>
+      <div class="inzerat"><b>Inzerát</b>Hledám rodinu, která sní koláč na tři dny. Zn.: zbyde i na zítra.</div>
+    </div>
+  </div>
+
+  <p class="poznamka">Návrh vzhledu pro Niky's Kitchen (17. 11. 2026): vintage noviny + pop-art komiks v barvách značky. Postavy i hlášky jsou vlastní, inspirace jen stylem (ne převzaté obrázky ani značky).</p>
+</main>
+</body>
+</html>
