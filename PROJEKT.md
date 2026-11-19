@@ -150,6 +150,16 @@ Seřazené podle doporučeného pořadí.
 * [ ] Niky: fotky jídel podle připraveného promptu, příběh pro O mně, recepty od babičky
 * [ ] Později: appka uvnitř webu, obchod, přihlášení, databáze na internetu pro newsletter a objednávky
 
+**Appka – nápady, které se nesmí ztratit (sepsáno 19. 11. z podkladů):**
+* [ ] **Fáze C – Můj týden:** 2 základy na týden se společnými surovinami, plán den / týden / měsíc, sladká tečka v plánu
+* [ ] **Nákup na celý týden** s odhadem ceny („tenhle týden asi 900 Kč“)
+* [ ] **„Kup hotové“ bez vypisování:** u každé položky odkaz, který ji vyhledá na Rohlíku / Košíku, + „Zkopírovat seznam“ a „Sdílet“. Přímé vložení do košíku zákazníka jde jen se spoluprací s Rohlíkem/Košíkem (nemají veřejné rozhraní) → nápad na později
+* [ ] **Profil s průvodcem** při prvním spuštění (užitek hned 1. den)
+* [ ] **Oblíbené recepty** (vlastní kuchařka), filtr vegetariánské, bílkoviny u receptů, pitný režim
+* [ ] **Motivace:** razítka do kuchařky za uvařený recept / splněný týden, „1 malá změna týdně“
+* [ ] **Fáze D – registrace a přihlášení** (profil, avatar, historie, oblíbené a nákup na všech zařízeních): přes **Supabase** (zdarma, EU, e-mail i Google). **Niky založí účet**, Claude napojí; doplnit ochranu soukromí
+* [ ] **Fáze E – komunita:** hodnocení receptů, sekce Od babičky
+
 **Shopify – ukázkový obchod do portfolia** (úkoly i návody jsou v E-commerce akademii, modul 16):
 * [x] Smazat 17 ukázkových produktů od Shopify, opravit překlep „obět“ → „oběd“ (2026-11-07)
 * [ ] Přejmenovat obchod (doporučení: **Niky's Kitchen**), měna CZK, země Česko, časové pásmo Praha – Niky v Nastavení
