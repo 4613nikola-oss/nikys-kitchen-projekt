@@ -151,11 +151,12 @@ Seřazené podle doporučeného pořadí.
 * [ ] Později: appka uvnitř webu, obchod, přihlášení, databáze na internetu pro newsletter a objednávky
 
 **Appka – nápady, které se nesmí ztratit (sepsáno 19. 11. z podkladů):**
-* [ ] **Fáze C – Můj týden:** 2 základy na týden se společnými surovinami, plán den / týden / měsíc, sladká tečka v plánu
-* [ ] **Nákup na celý týden** s odhadem ceny („tenhle týden asi 900 Kč“)
-* [ ] **„Kup hotové“ bez vypisování:** u každé položky odkaz, který ji vyhledá na Rohlíku / Košíku, + „Zkopírovat seznam“ a „Sdílet“. Přímé vložení do košíku zákazníka jde jen se spoluprací s Rohlíkem/Košíkem (nemají veřejné rozhraní) → nápad na později
-* [ ] **Profil s průvodcem** při prvním spuštění (užitek hned 1. den)
-* [ ] **Oblíbené recepty** (vlastní kuchařka), filtr vegetariánské, bílkoviny u receptů, pitný režim
+* [x] **Fáze C – Můj týden:** přepínač Den / Týden, 7 dní, obědy a večeře se opakují po 3 dnech (vaří se dopředu), snídaně a svačiny se střídají (2026-11-19). Zbývá: plán na měsíc
+* [x] **Nákup na celý týden** jedním tlačítkem + **odhad ceny** (orientační ceny běžného balení) (2026-11-19)
+* [x] **„Kup hotové“ bez vypisování:** u každé položky R (Rohlík) a K (Košík) – rovnou ji vyhledá, + „Zkopírovat seznam“ a „Sdílet“ (2026-11-19). Přímé vložení do košíku zákazníka jde jen se spoluprací s Rohlíkem/Košíkem → nápad na později
+* [x] **Průvodce prvním spuštěním** (3 kroky) (2026-11-19)
+* [x] **Oblíbené recepty:** srdíčko u receptu + filtr Oblíbené (2026-11-19)
+* [ ] Filtr vegetariánské, bílkoviny u receptů, pitný režim
 * [ ] **Motivace:** razítka do kuchařky za uvařený recept / splněný týden, „1 malá změna týdně“
 * [ ] **Fáze D – registrace a přihlášení** (profil, avatar, historie, oblíbené a nákup na všech zařízeních): přes **Supabase** (zdarma, EU, e-mail i Google). **Niky založí účet**, Claude napojí; doplnit ochranu soukromí
 * [ ] **Fáze E – komunita:** hodnocení receptů, sekce Od babičky
