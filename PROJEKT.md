@@ -151,7 +151,8 @@ Seřazené podle doporučeného pořadí.
 * [ ] Později: appka uvnitř webu, obchod, přihlášení, databáze na internetu pro newsletter a objednávky
 
 **Appka – nápady, které se nesmí ztratit (sepsáno 19. 11. z podkladů):**
-* [x] **Fáze C – Můj týden:** přepínač Den / Týden, 7 dní, obědy a večeře se opakují po 3 dnech (vaří se dopředu), snídaně a svačiny se střídají (2026-11-19). Zbývá: plán na měsíc
+* [x] **Fáze C – Můj týden:** přepínač Den / Týden, 7 dní, obědy a večeře se opakují po 3 dnech (vaří se dopředu), snídaně a svačiny se střídají (2026-11-19)
+* [x] **Můj měsíc:** třetí přepínač Měsíc = 4 týdny za sebou (každý jiný), nákup vždy jen po týdnech, tlačítko 🔄 Jiný recept u každého jídla v týdnu i měsíci (oběd/večeře se vymění na celé 3 dny), u dnů datum; když je receptů málo, appka upozorní, že se opakují (2026-11-22)
 * [x] **Nákup na celý týden** jedním tlačítkem + **odhad ceny** (orientační ceny běžného balení) (2026-11-19)
 * [x] **„Kup hotové“ bez vypisování:** u každé položky R (Rohlík) a K (Košík) – rovnou ji vyhledá, + „Zkopírovat seznam“ a „Sdílet“ (2026-11-19). Přímé vložení do košíku zákazníka jde jen se spoluprací s Rohlíkem/Košíkem → nápad na později
 * [x] **Průvodce prvním spuštěním** (3 kroky) (2026-11-19)
@@ -216,7 +217,7 @@ Seřazené podle doporučeného pořadí.
 * **Plán sociálních sítí a reklamy** (návrh v Miru, rámy 28 a 29): Instagram, Pinterest, Facebook, později TikTok, e-mail a nálepky Tečky na GIPHY; šablony karuselu a krátkého videa; reklama až s prvním placeným produktem, malý test 1–3 tis. Kč
 * *(odloženo)* **Niky's krabičky** jako název e-shopu s krabičkami, tři varianty FIT / STANDARD / SVALY (= hubnout / udržet / nabrat), logo NK a heslo „Zdravě a chutně“
 * **Brainstorming appky – otevřené otázky (2026-11-22, větev `brainstorming-appka`):**
-  1. **Plán na měsíc** *(doporučeno jako první)* – 4× týden, nebo kalendář s přesouváním jídel? Recepty opakovat, nebo střídat? Nákup na měsíc, nebo vždy na další týden?
+  1. ~~**Plán na měsíc**~~ → rozhodnuto a hotovo (4 týdny, nákup po týdnech, 🔄 Jiný recept), viz Úkoly
   2. **Motivace a razítka** – za co razítko (uvařený recept, splněný den, týden bez sladkého)? Sbírat do kuchařky s Tečkou, která se mění podle počtu razítek? „1 malá změna týdně“ jako pondělní úkol (např. sklenice vody navíc)
   3. **Pitný režim, bílkoviny, vegetariáni** – bílkoviny jen u receptů, nebo i v plánu dne („dnes 92 ze 110 g“)? Pitný režim odškrtávat sklenice, nebo jen připomínat? Filtr jen vegetariánské, nebo i vegan a bez lepku?
   4. **Registrace (Fáze D)** – co ukládat do účtu? Appka i bez účtu (doporučeno: ano, účet jen jako bonus)
