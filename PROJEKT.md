@@ -1,7 +1,7 @@
 # Niky's Kitchen – kniha projektu
 
 Sem se zapisuje jen to, na čem jsme se v chatu **shodly**. Nápady, o kterých ještě nevíme, patří do části 💡 Nápady.
-Poslední aktualizace: 2026-11-16
+Poslední aktualizace: 2026-11-22
 
 ---
 
@@ -215,6 +215,12 @@ Seřazené podle doporučeného pořadí.
 * **Maskot značky** – vlastní postavička, která se objeví na webu, v appce, v obchodě i v GIFech na sítích (vítá, počítá, vaří, utěšuje při chybě, slaví). Koncepty: **Tečka** (sladká tečka se šalvějovým lístkem) a **Kastrolek**. Niky se líbí Tečka s nápadem, že se **promění v předmět** (talíř, koláč, vidlička…), lístek a oči zůstávají. Soubory v `podklady/maskot/`, náhled v Miru (rám 27)
 * **Plán sociálních sítí a reklamy** (návrh v Miru, rámy 28 a 29): Instagram, Pinterest, Facebook, později TikTok, e-mail a nálepky Tečky na GIPHY; šablony karuselu a krátkého videa; reklama až s prvním placeným produktem, malý test 1–3 tis. Kč
 * *(odloženo)* **Niky's krabičky** jako název e-shopu s krabičkami, tři varianty FIT / STANDARD / SVALY (= hubnout / udržet / nabrat), logo NK a heslo „Zdravě a chutně“
+* **Brainstorming appky – otevřené otázky (2026-11-22, větev `brainstorming-appka`):**
+  1. **Plán na měsíc** *(doporučeno jako první)* – 4× týden, nebo kalendář s přesouváním jídel? Recepty opakovat, nebo střídat? Nákup na měsíc, nebo vždy na další týden?
+  2. **Motivace a razítka** – za co razítko (uvařený recept, splněný den, týden bez sladkého)? Sbírat do kuchařky s Tečkou, která se mění podle počtu razítek? „1 malá změna týdně“ jako pondělní úkol (např. sklenice vody navíc)
+  3. **Pitný režim, bílkoviny, vegetariáni** – bílkoviny jen u receptů, nebo i v plánu dne („dnes 92 ze 110 g“)? Pitný režim odškrtávat sklenice, nebo jen připomínat? Filtr jen vegetariánské, nebo i vegan a bez lepku?
+  4. **Registrace (Fáze D)** – co ukládat do účtu? Appka i bez účtu (doporučeno: ano, účet jen jako bonus)
+  5. **Komunita (Fáze E)** – hvězdičky, nebo jen „uvařila jsem 👍“? Od babičky posílají i uživatelé, nebo přidává jen Niky?
 * **Štítná žláza:** lidé po jejím odstranění často řeší přibírání (v průměru asi +2 kg) – téma pro článek a pro upozornění v kalkulačce
 
 ---
