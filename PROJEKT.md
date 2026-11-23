@@ -161,7 +161,8 @@ Seřazené podle doporučeného pořadí.
 * [x] **Průvodce prvním spuštěním** (3 kroky) (2026-11-19)
 * [x] **Oblíbené recepty:** srdíčko u receptu + filtr Oblíbené (2026-11-19)
 * [ ] Filtr vegetariánské, bílkoviny u receptů, pitný režim
-* [ ] **Motivace:** razítka do kuchařky za uvařený recept / splněný týden, „1 malá změna týdně“
+* [x] **Motivace:** tlačítko „Uvařeno“ u jídel v Můj den; razítka za uvařený recept 🍳, splněný den 📅, splněný týden 🗓️ (stačí 5 dní ze 7) a malou změnu 🌱; **Moje kuchařka** v Profilu, kde se Tečka mění podle počtu razítek (5 = vaří, 15 = slaví, 30 = dort); **malá změna týdne** (12 úkolů dokola, jde přeskočit). Bez trestů, razítka nemizí (2026-11-23, na `dev`)
+* [ ] Dokreslit Tečku s kuchařskou čepicí (případně místo „slaví“ u 15 razítek)
 * [ ] **Fáze D – registrace a přihlášení** (profil, avatar, historie, oblíbené a nákup na všech zařízeních): přes **Supabase** (zdarma, EU, e-mail i Google). **Niky založí účet**, Claude napojí; doplnit ochranu soukromí
 * [ ] **Fáze E – komunita:** hodnocení receptů, sekce Od babičky
 
@@ -221,7 +222,7 @@ Seřazené podle doporučeného pořadí.
 * *(odloženo)* **Niky's krabičky** jako název e-shopu s krabičkami, tři varianty FIT / STANDARD / SVALY (= hubnout / udržet / nabrat), logo NK a heslo „Zdravě a chutně“
 * **Brainstorming appky – otevřené otázky (2026-11-22, větev `brainstorming-appka`):**
   1. ~~**Plán na měsíc**~~ → rozhodnuto a hotovo (4 týdny, nákup po týdnech, 🔄 Jiný recept), viz Úkoly
-  2. **Motivace a razítka** – za co razítko (uvařený recept, splněný den, týden bez sladkého)? Sbírat do kuchařky s Tečkou, která se mění podle počtu razítek? „1 malá změna týdně“ jako pondělní úkol (např. sklenice vody navíc)
+  2. ~~**Motivace a razítka**~~ → rozhodnuto a hotovo, viz Úkoly
   3. **Pitný režim, bílkoviny, vegetariáni** – bílkoviny jen u receptů, nebo i v plánu dne („dnes 92 ze 110 g“)? Pitný režim odškrtávat sklenice, nebo jen připomínat? Filtr jen vegetariánské, nebo i vegan a bez lepku?
   4. **Registrace (Fáze D)** – co ukládat do účtu? Appka i bez účtu (doporučeno: ano, účet jen jako bonus)
   5. **Komunita (Fáze E)** – hvězdičky, nebo jen „uvařila jsem 👍“? Od babičky posílají i uživatelé, nebo přidává jen Niky?
