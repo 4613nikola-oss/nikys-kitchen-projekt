@@ -160,7 +160,10 @@ Seřazené podle doporučeného pořadí.
 * [x] **„Kup hotové“ bez vypisování:** u každé položky R (Rohlík) a K (Košík) – rovnou ji vyhledá, + „Zkopírovat seznam“ a „Sdílet“ (2026-11-19). Přímé vložení do košíku zákazníka jde jen se spoluprací s Rohlíkem/Košíkem → nápad na později
 * [x] **Průvodce prvním spuštěním** (3 kroky) (2026-11-19)
 * [x] **Oblíbené recepty:** srdíčko u receptu + filtr Oblíbené (2026-11-19)
-* [ ] Filtr vegetariánské, bílkoviny u receptů, pitný režim
+* [x] **Pitný režim, bílkoviny, jídelníček:** v Můj den sklenice vody s cílem podle profilu (ženy 7, muži 8, při vysoké aktivitě +1; orientačně podle EFSA), bílkoviny u receptů na webu i v appce a v plánu dne „~X z Y g“ (cíl 1,4 / 1,0 / 1,8 g na kg podle cíle); v Profilu volby Vegetariánsky, Bez lepku, Bez mléka – plán pak nabízí jen vhodná jídla; filtr 🥕 Vege v Receptech. Vegan zatím ne (2026-11-23, online)
+* [x] **9 nových ukázkových receptů** (web i appka, česky i anglicky): tvarohové lívance, chilli sin carne, losos s bramborem, kuřecí wrap, hummus, shakshuka, chia puding, cizrnové kari, banánový shake s tvarohem. Bez fotek (zatím Tečka). Celkem 26 receptů, 22 vegetariánských (2026-11-23, online)
+* [ ] **Niky:** zkontrolovat bílkoviny a kcal (orientačně spočítané) a vyzkoušet nové recepty; doplnit fotky
+* [ ] Víc snídaní bez mléka a lepku (s oběma omezeními zatím žádná)
 * [x] **Motivace:** tlačítko „Uvařeno“ u jídel v Můj den; razítka za uvařený recept 🍳, splněný den 📅, splněný týden 🗓️ (stačí 5 dní ze 7) a malou změnu 🌱; **Moje kuchařka** v Profilu, kde se Tečka mění podle počtu razítek (5 = vaří, 15 = slaví, 30 = dort); **malá změna týdne** (12 úkolů dokola, jde přeskočit). Bez trestů, razítka nemizí (2026-11-23, online)
 * [ ] Dokreslit Tečku s kuchařskou čepicí (případně místo „slaví“ u 15 razítek)
 * [ ] **Fáze D – registrace a přihlášení** (profil, avatar, historie, oblíbené a nákup na všech zařízeních): přes **Supabase** (zdarma, EU, e-mail i Google). **Niky založí účet**, Claude napojí; doplnit ochranu soukromí
@@ -223,7 +226,7 @@ Seřazené podle doporučeného pořadí.
 * **Brainstorming appky – otevřené otázky (2026-11-22, větev `brainstorming-appka`):**
   1. ~~**Plán na měsíc**~~ → rozhodnuto a hotovo (4 týdny, nákup po týdnech, 🔄 Jiný recept), viz Úkoly
   2. ~~**Motivace a razítka**~~ → rozhodnuto a hotovo, viz Úkoly
-  3. **Pitný režim, bílkoviny, vegetariáni** – bílkoviny jen u receptů, nebo i v plánu dne („dnes 92 ze 110 g“)? Pitný režim odškrtávat sklenice, nebo jen připomínat? Filtr jen vegetariánské, nebo i vegan a bez lepku?
+  3. ~~**Pitný režim, bílkoviny, vegetariáni**~~ → rozhodnuto a hotovo, viz Úkoly
   4. **Registrace (Fáze D)** – co ukládat do účtu? Appka i bez účtu (doporučeno: ano, účet jen jako bonus)
   5. **Komunita (Fáze E)** – hvězdičky, nebo jen „uvařila jsem 👍“? Od babičky posílají i uživatelé, nebo přidává jen Niky?
 * **Štítná žláza:** lidé po jejím odstranění často řeší přibírání (v průměru asi +2 kg) – téma pro článek a pro upozornění v kalkulačce
