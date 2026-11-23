@@ -161,7 +161,7 @@ Seřazené podle doporučeného pořadí.
 * [x] **Průvodce prvním spuštěním** (3 kroky) (2026-11-19)
 * [x] **Oblíbené recepty:** srdíčko u receptu + filtr Oblíbené (2026-11-19)
 * [ ] Filtr vegetariánské, bílkoviny u receptů, pitný režim
-* [x] **Motivace:** tlačítko „Uvařeno“ u jídel v Můj den; razítka za uvařený recept 🍳, splněný den 📅, splněný týden 🗓️ (stačí 5 dní ze 7) a malou změnu 🌱; **Moje kuchařka** v Profilu, kde se Tečka mění podle počtu razítek (5 = vaří, 15 = slaví, 30 = dort); **malá změna týdne** (12 úkolů dokola, jde přeskočit). Bez trestů, razítka nemizí (2026-11-23, na `dev`)
+* [x] **Motivace:** tlačítko „Uvařeno“ u jídel v Můj den; razítka za uvařený recept 🍳, splněný den 📅, splněný týden 🗓️ (stačí 5 dní ze 7) a malou změnu 🌱; **Moje kuchařka** v Profilu, kde se Tečka mění podle počtu razítek (5 = vaří, 15 = slaví, 30 = dort); **malá změna týdne** (12 úkolů dokola, jde přeskočit). Bez trestů, razítka nemizí (2026-11-23, online)
 * [ ] Dokreslit Tečku s kuchařskou čepicí (případně místo „slaví“ u 15 razítek)
 * [ ] **Fáze D – registrace a přihlášení** (profil, avatar, historie, oblíbené a nákup na všech zařízeních): přes **Supabase** (zdarma, EU, e-mail i Google). **Niky založí účet**, Claude napojí; doplnit ochranu soukromí
 * [ ] **Fáze E – komunita:** hodnocení receptů, sekce Od babičky
