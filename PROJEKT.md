@@ -227,7 +227,7 @@ Seřazené podle doporučeného pořadí.
   1. ~~**Plán na měsíc**~~ → rozhodnuto a hotovo (4 týdny, nákup po týdnech, 🔄 Jiný recept), viz Úkoly
   2. ~~**Motivace a razítka**~~ → rozhodnuto a hotovo, viz Úkoly
   3. ~~**Pitný režim, bílkoviny, vegetariáni**~~ → rozhodnuto a hotovo, viz Úkoly
-  4. ~~**Registrace (Fáze D)**~~ → rozhodnuto, viz Úkoly
+  4. **Registrace (Fáze D)** → ✅ rozhodnuto, ⏳ **rozpracováno** (čeká na SQL a nastavení v Supabase), viz Úkoly
   5. **Komunita (Fáze E)** – hvězdičky, nebo jen „uvařila jsem 👍“? Od babičky posílají i uživatelé, nebo přidává jen Niky?
 * **Štítná žláza:** lidé po jejím odstranění často řeší přibírání (v průměru asi +2 kg) – téma pro článek a pro upozornění v kalkulačce
 
