@@ -166,7 +166,7 @@ Seřazené podle doporučeného pořadí.
 * [ ] Víc snídaní bez mléka a lepku (s oběma omezeními zatím žádná)
 * [x] **Motivace:** tlačítko „Uvařeno“ u jídel v Můj den; razítka za uvařený recept 🍳, splněný den 📅, splněný týden 🗓️ (stačí 5 dní ze 7) a malou změnu 🌱; **Moje kuchařka** v Profilu, kde se Tečka mění podle počtu razítek (5 = vaří, 15 = slaví, 30 = dort); **malá změna týdne** (12 úkolů dokola, jde přeskočit). Bez trestů, razítka nemizí (2026-11-23, online)
 * [ ] Dokreslit Tečku s kuchařskou čepicí (případně místo „slaví“ u 15 razítek)
-* [ ] **Fáze D – registrace a přihlášení** (profil, avatar, historie, oblíbené a nákup na všech zařízeních): přes **Supabase** (zdarma, EU, e-mail i Google). **Niky založí účet**, Claude napojí; doplnit ochranu soukromí
+* [ ] **Fáze D – registrace a přihlášení** přes **Supabase** (projekt založen 2026-11-23, Evropa). Rozhodnuto: appka funguje i bez účtu; přihlášení **e-mailem s odkazem, bez hesla** (Google později); do účtu se ukládá profil, avatar, oblíbené, razítka, nákup, lednička (pití ne). **Jen s účtem:** Moje kuchařka a razítka (vč. malé změny týdne) + data na všech zařízeních. Týden, Měsíc a Oblíbené zůstávají pro všechny. Kdo razítka už má, nic mu nezmizí. Tlačítka Stáhnout moje data / Odhlásit / Smazat účet. **Postaveno na větvi, čeká na:** Niky spustí SQL v Supabase a nastaví adresy → test → text Ochrana soukromí zkontrolovat → pak ven
 * [ ] **Fáze E – komunita:** hodnocení receptů, sekce Od babičky
 
 **Shopify – ukázkový obchod do portfolia** (úkoly i návody jsou v E-commerce akademii, modul 16):
@@ -227,7 +227,7 @@ Seřazené podle doporučeného pořadí.
   1. ~~**Plán na měsíc**~~ → rozhodnuto a hotovo (4 týdny, nákup po týdnech, 🔄 Jiný recept), viz Úkoly
   2. ~~**Motivace a razítka**~~ → rozhodnuto a hotovo, viz Úkoly
   3. ~~**Pitný režim, bílkoviny, vegetariáni**~~ → rozhodnuto a hotovo, viz Úkoly
-  4. **Registrace (Fáze D)** – co ukládat do účtu? Appka i bez účtu (doporučeno: ano, účet jen jako bonus)
+  4. ~~**Registrace (Fáze D)**~~ → rozhodnuto, viz Úkoly
   5. **Komunita (Fáze E)** – hvězdičky, nebo jen „uvařila jsem 👍“? Od babičky posílají i uživatelé, nebo přidává jen Niky?
 * **Štítná žláza:** lidé po jejím odstranění často řeší přibírání (v průměru asi +2 kg) – téma pro článek a pro upozornění v kalkulačce
 
