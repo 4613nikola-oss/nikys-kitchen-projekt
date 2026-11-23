@@ -137,8 +137,8 @@ Seřazené podle doporučeného pořadí.
 * [x] Fotky ke všem receptům: ilustrační fotky s volnou licencí (Openverse/Flickr), autor a licence pod fotkou. Časem nahradit vlastními (2026-11-12)
 * [x] **Fáze B – nový vzhled** na webu i v appce: pozadí A (bylinková šalvěj), nová Tečka v tenké lince (14 podob, původní v `assets/maskot/puvodni`), 29 vlastních ikonek, karta receptu jako polaroid s barvou kategorie, avatary v profilu appky, animace 3 (Tečka → dort) a 4 (odškrtnutí) (2026-11-12)
 * [x] Case study v hlavním README podkladů + GIFy animací v README webu a appky (2026-11-16)
-* [x] **Úpravy vzhledu webu:** nadpisy bez podtržení, logo a menu vlevo, tlačítka při najetí jasně mění barvu, menší úvodní písmeno, tmavý text na zelených plochách, víc mezer mezi sekcemi (2026-11-23, na `dev`)
-* [x] **Recepty a kartičky:** na kartičce alergeny, štítky Fit / Normal / Svaly a komiksová bublina při najetí; filtry kategorií jako velké ikonky; našeptávač ve vyhledávání; detail receptu jako štítek a novinové výstřižky, velká tlačítka + a −, **náročnost** (1–3 vařečky) a **Pro koho to je** (2026-11-23, na `dev`)
+* [x] **Úpravy vzhledu webu:** nadpisy bez podtržení, logo a menu vlevo, tlačítka při najetí jasně mění barvu, menší úvodní písmeno, tmavý text na zelených plochách, víc mezer mezi sekcemi (2026-11-23, online)
+* [x] **Recepty a kartičky:** na kartičce alergeny, štítky Fit / Normal / Svaly a komiksová bublina při najetí; filtry kategorií jako velké ikonky; našeptávač ve vyhledávání; detail receptu jako štítek a novinové výstřižky, velká tlačítka + a −, **náročnost** (1–3 vařečky) a **Pro koho to je** (2026-11-23, online)
 * [ ] **Niky:** zkontrolovat náročnost a Fit / Normal / Svaly u 17 receptů (Claude je předvyplnil orientačně podle kcal, času a surovin)
 * [ ] Obálky produktů a merch v Shopify překreslit do nové Tečky
 * [x] Startovací knížka (dárek za newsletter): 12 stran A5, česky i anglicky, 7 receptů do 15 minut, talíř, nákupní seznam, tipy od Tečky, místo na poznámky. Stáhne se hned po přihlášení k newsletteru (2026-11-10)
