@@ -148,7 +148,8 @@ Seřazené podle doporučeného pořadí.
 * [ ] **Razítka → „Hrnec“** (suroviny místo razítek, plný hrnec odemkne tajný recept, brzdy proti podvádění) – čeká na rozhodnutí A–D
 * [ ] **Fotky ke krokům receptů:** vlastní fotky od Niky (nejlepší), nebo AI ilustrace s poznámkou
 * [ ] Fotky ještě chybí u 3 receptů (chilli sin carne, cizrnové kari, pohanková kaše) – volné fotky nesedly (maso u vege receptu); ideálně vlastní fotky
-* [ ] **Delší články** se zajímavostmi a odkazy (čeká na schválení návrhu)
+* [x] **Delší články** (6 článků, česky i anglicky): zhruba dvakrát delší, rámeček „Víš, že…?“ se zdrojem (WHO, ACSM, USDA, odborné studie), „Vyzkoušej hned“, recepty a články přímo v textu, celý text vidět hned (2026-11-24, online). **Niky:** přečíst a případně upravit tón
+* [x] **Kolo úprav 24. 11. večer (online):** hero na úvodu, Komiks dne s různými bublinami, hlavičky rubrik s čísly, ikonky u kroků receptu, puntíky náročnosti, rámeček „Chystáš se to uvařit?“; appka – sekce v Profilu jako barevné šuplíky s náhledy, tužka na avataru, razítka jako ilustrace surovin, kroužky splnění měnící barvu, Můj den s komiksem
 * [ ] **Niky:** zkontrolovat náročnost a Fit / Normal / Svaly u 17 receptů (Claude je předvyplnil orientačně podle kcal, času a surovin)
 * [ ] Obálky produktů a merch v Shopify překreslit do nové Tečky
 * [x] Startovací knížka (dárek za newsletter): 12 stran A5, česky i anglicky, 7 receptů do 15 minut, talíř, nákupní seznam, tipy od Tečky, místo na poznámky. Stáhne se hned po přihlášení k newsletteru (2026-11-10)
