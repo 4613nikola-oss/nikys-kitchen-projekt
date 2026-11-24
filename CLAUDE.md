@@ -40,6 +40,7 @@
 * Node.js ani `gh` na počítači nejsou. Kontrolu JS dělej přes Docker: `docker run --rm -v "<cesta>:/src:ro" node:22-alpine node --check /src/<soubor>.js`
 * `docker.exe` není v PATH shellu → `C:\Program Files\Docker\Docker\resources\bin`
 * Appka lokálně: ve složce appky `docker compose up -d` → http://localhost:8080 (HTML/CSS/JS se projeví po F5, `nginx.conf`/`Dockerfile` vyžadují `--build`)
+* **Appka: při každé změně CSS/JS zvýšit `?v=` u `css/app.css` a `js/*.js` v `index.html`** – jinak prohlížeč ukazuje starou verzi
 
 ### Git a GitHub
 
