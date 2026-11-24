@@ -170,7 +170,7 @@ Seřazené podle doporučeného pořadí.
 * [ ] **Fáze E – komunita** (rozhodnuto 2026-11-24, staví se až s účty):
   * **Hodnocení:** žádné hvězdičky, jen „Uvařeno“ a „❤️ Chutnalo“; jen přihlášení, 1× na recept; „Uvařeno“ v appce se započítá; čísla až od 3 hlasů, do té doby „Buď první, kdo to uvaří“
   * **Komentáře:** zatím ne (moderování)
-  * **Od babičky:** [x] kostra rubriky na webu (stránka, štítek a Příběh receptu, 2026-11-24, na `dev`) → [ ] **Niky doplní své recepty od babičky s příběhem** → [ ] později formulář pro čtenáře se schvalováním (souhlas se zveřejněním, jen křestní jméno, štítek „Od čtenáře“)
+  * **Od babičky:** [x] kostra rubriky na webu (stránka, štítek a Příběh receptu, 2026-11-24, online) → [ ] **Niky doplní své recepty od babičky s příběhem** → [ ] později formulář pro čtenáře se schvalováním (souhlas se zveřejněním, jen křestní jméno, štítek „Od čtenáře“)
 
 **Shopify – ukázkový obchod do portfolia** (úkoly i návody jsou v E-commerce akademii, modul 16):
 * [x] Smazat 17 ukázkových produktů od Shopify, opravit překlep „obět“ → „oběd“ (2026-11-07)
