@@ -167,7 +167,10 @@ Seřazené podle doporučeného pořadí.
 * [x] **Motivace:** tlačítko „Uvařeno“ u jídel v Můj den; razítka za uvařený recept 🍳, splněný den 📅, splněný týden 🗓️ (stačí 5 dní ze 7) a malou změnu 🌱; **Moje kuchařka** v Profilu, kde se Tečka mění podle počtu razítek (5 = vaří, 15 = slaví, 30 = dort); **malá změna týdne** (12 úkolů dokola, jde přeskočit). Bez trestů, razítka nemizí (2026-11-23, online)
 * [ ] Dokreslit Tečku s kuchařskou čepicí (případně místo „slaví“ u 15 razítek)
 * [ ] **Fáze D – registrace a přihlášení** přes **Supabase** (projekt založen 2026-11-23, Evropa). Rozhodnuto: appka funguje i bez účtu; přihlášení **e-mailem s odkazem, bez hesla** (Google později); do účtu se ukládá profil, avatar, oblíbené, razítka, nákup, lednička (pití ne). **Jen s účtem:** Moje kuchařka a razítka (vč. malé změny týdne) + data na všech zařízeních. Týden, Měsíc a Oblíbené zůstávají pro všechny. Kdo razítka už má, nic mu nezmizí. Tlačítka Stáhnout moje data / Odhlásit / Smazat účet. **Postaveno na větvi, čeká na:** Niky spustí SQL v Supabase a nastaví adresy → test → text Ochrana soukromí zkontrolovat → pak ven
-* [ ] **Fáze E – komunita:** hodnocení receptů, sekce Od babičky
+* [ ] **Fáze E – komunita** (rozhodnuto 2026-11-24, staví se až s účty):
+  * **Hodnocení:** žádné hvězdičky, jen „Uvařeno“ a „❤️ Chutnalo“; jen přihlášení, 1× na recept; „Uvařeno“ v appce se započítá; čísla až od 3 hlasů, do té doby „Buď první, kdo to uvaří“
+  * **Komentáře:** zatím ne (moderování)
+  * **Od babičky:** [x] kostra rubriky na webu (stránka, štítek a Příběh receptu, 2026-11-24, na `dev`) → [ ] **Niky doplní své recepty od babičky s příběhem** → [ ] později formulář pro čtenáře se schvalováním (souhlas se zveřejněním, jen křestní jméno, štítek „Od čtenáře“)
 
 **Shopify – ukázkový obchod do portfolia** (úkoly i návody jsou v E-commerce akademii, modul 16):
 * [x] Smazat 17 ukázkových produktů od Shopify, opravit překlep „obět“ → „oběd“ (2026-11-07)
@@ -228,7 +231,7 @@ Seřazené podle doporučeného pořadí.
   2. ~~**Motivace a razítka**~~ → rozhodnuto a hotovo, viz Úkoly
   3. ~~**Pitný režim, bílkoviny, vegetariáni**~~ → rozhodnuto a hotovo, viz Úkoly
   4. **Registrace (Fáze D)** → ✅ rozhodnuto, ⏳ **rozpracováno** (čeká na SQL a nastavení v Supabase), viz Úkoly
-  5. **Komunita (Fáze E)** – hvězdičky, nebo jen „uvařila jsem 👍“? Od babičky posílají i uživatelé, nebo přidává jen Niky?
+  5. **Komunita (Fáze E)** → ✅ rozhodnuto, ⏳ čeká na účty (kostra Od babičky hotová), viz Úkoly
 * **Štítná žláza:** lidé po jejím odstranění často řeší přibírání (v průměru asi +2 kg) – téma pro článek a pro upozornění v kalkulačce
 
 ---
