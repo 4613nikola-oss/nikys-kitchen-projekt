@@ -1,7 +1,7 @@
 # Niky's Kitchen – kniha projektu
 
 Sem se zapisuje jen to, na čem jsme se v chatu **shodly**. Nápady, o kterých ještě nevíme, patří do části 💡 Nápady.
-Poslední aktualizace: 2026-11-23
+Poslední aktualizace: 2026-11-24
 
 ---
 
@@ -140,6 +140,11 @@ Seřazené podle doporučeného pořadí.
 * [x] **Úpravy vzhledu webu:** nadpisy bez podtržení, logo a menu vlevo, tlačítka při najetí jasně mění barvu, menší úvodní písmeno, tmavý text na zelených plochách, víc mezer mezi sekcemi (2026-11-23, online)
 * [x] **Recepty a kartičky:** na kartičce alergeny, štítky Fit / Normal / Svaly a komiksová bublina při najetí; filtry kategorií jako velké ikonky; našeptávač ve vyhledávání; detail receptu jako štítek a novinové výstřižky, velká tlačítka + a −, **náročnost** (1–3 vařečky) a **Pro koho to je** (2026-11-23, online)
 * [x] **Dávka 3 – články, newsletter, O mně, FAQ:** články s filtrem Vše / Fit / Normal / Svaly a souměrnou mřížkou 3+3; pod každým článkem 3 doporučené články a newsletter; newsletter box s otázkou v nadpisu, „zdarma“ zeleně a tučně a výhodami v odrážkách (na úvodu, v obchodě, pod články); „Kdo je Niky“ na úvodu s polaroidem; FAQ přes celou šířku s ikonou ? a +/− (2026-11-24, online)
+* [x] **Účty v appce online** (2026-11-24): přihlášení **6místným kódem z e-mailu** (bez hesla, e-maily přes Brevo), data v Supabase (EU), Správa účtu (stáhnout / smazat), Ochrana soukromí na webu i v appce
+* [x] **Kolo úprav 24. 11. (web, online):** obchod – produkt bez štítku, cena v boxu, knížka jde **prolistovat** (3 dvojstrany) a obálka je klikací; fotky k 9 novým receptům (volné licence); v receptu **Přidat do nákupu v appce**, Zpět do appky, náročnost jako **obličej**, zvýrazněný čas a teplota v krocích, **Mohlo by ti chutnat** + vždy 3 články; Články – barevné filtry Fit/Normal/Svaly, **hashtagy**, Tečka podle tématu, „Číst článek →“; filtry receptů jako velká tlačítka; karta Od babičky na stránce Recepty; hlavička se vzduchem; vlastní ikonky místo emoji; kontrast hlídaný výpočtem
+* [x] **Kolo úprav 24. 11. (appka, online):** vlastní ikonky místo všech emoji, **fotky receptů** v týdnu, Můj den i Receptech, štítky kcal / min / bílkoviny, recepty se otevírají na nové kartě, nápadné rámečky s informacemi, **Jak sbírat razítka ve 4 krocích**, vínový zámek, sklenice vody jdou klikat, avatar a kcal v záložce Profil, Ochrana soukromí v dlaždicích
+* [ ] Fotky ještě chybí u 3 receptů (chilli sin carne, cizrnové kari, pohanková kaše) – volné fotky nesedly (maso u vege receptu); ideálně vlastní fotky
+* [ ] **Delší články** se zajímavostmi a odkazy (čeká na schválení návrhu)
 * [ ] **Niky:** zkontrolovat náročnost a Fit / Normal / Svaly u 17 receptů (Claude je předvyplnil orientačně podle kcal, času a surovin)
 * [ ] Obálky produktů a merch v Shopify překreslit do nové Tečky
 * [x] Startovací knížka (dárek za newsletter): 12 stran A5, česky i anglicky, 7 receptů do 15 minut, talíř, nákupní seznam, tipy od Tečky, místo na poznámky. Stáhne se hned po přihlášení k newsletteru (2026-11-10)
